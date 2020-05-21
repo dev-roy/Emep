@@ -51,6 +51,7 @@
 		33F2A8422475A45A00B86D7F /* EmepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F2A8462475A45B00B86D7F /* EmepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmepUITests.swift; sourceTree = "<group>"; };
 		33F2A8482475A45B00B86D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F2A8B02476F04B00B86D7F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +102,15 @@
 		33F2A8202475A45200B86D7F /* Emep */ = {
 			isa = PBXGroup;
 			children = (
+				33F2A8B12476F5B100B86D7F /* Model */,
+				33F2A8B22476F5DB00B86D7F /* View */,
+				33F2A8B32476F5F800B86D7F /* ViewModel */,
 				33F2A8212475A45200B86D7F /* AppDelegate.swift */,
 				33F2A8232475A45200B86D7F /* SceneDelegate.swift */,
 				33F2A8252475A45200B86D7F /* ViewController.swift */,
 				33F2A8272475A45200B86D7F /* Main.storyboard */,
 				33F2A82D2475A45A00B86D7F /* Assets.xcassets */,
+				33F2A8B02476F04B00B86D7F /* README.md */,
 				33F2A82F2475A45A00B86D7F /* LaunchScreen.storyboard */,
 				33F2A8322475A45A00B86D7F /* Info.plist */,
 				33F2A82A2475A45200B86D7F /* Emep.xcdatamodeld */,
@@ -129,6 +134,27 @@
 				33F2A8482475A45B00B86D7F /* Info.plist */,
 			);
 			path = EmepUITests;
+			sourceTree = "<group>";
+		};
+		33F2A8B12476F5B100B86D7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33F2A8B22476F5DB00B86D7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33F2A8B32476F5F800B86D7F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
