@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */; };
+		2EF05B397F5B6FC1AD4EE8D5 /* Pods_Emep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E73D129A0082EEC923CA517 /* Pods_Emep.framework */; };
 		335B67E12477FDE300CE67A5 /* MyRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E02477FDE300CE67A5 /* MyRecords.storyboard */; };
 		335B67E32477FDFD00CE67A5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E22477FDFD00CE67A5 /* Profile.storyboard */; };
 		335B67E52477FE1000CE67A5 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E42477FE1000CE67A5 /* Calendar.storyboard */; };
@@ -20,6 +22,7 @@
 		33F2A8312475A45A00B86D7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F2A82F2475A45A00B86D7F /* LaunchScreen.storyboard */; };
 		33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A83B2475A45A00B86D7F /* EmepTests.swift */; };
 		33F2A8472475A45B00B86D7F /* EmepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A8462475A45B00B86D7F /* EmepUITests.swift */; };
+		427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.release.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.release.xcconfig"; sourceTree = "<group>"; };
+		083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.release.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E73D129A0082EEC923CA517 /* Pods_Emep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		335B67E02477FDE300CE67A5 /* MyRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRecords.storyboard; sourceTree = "<group>"; };
 		335B67E22477FDFD00CE67A5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		335B67E42477FE1000CE67A5 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
@@ -60,6 +66,12 @@
 		33F2A8462475A45B00B86D7F /* EmepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmepUITests.swift; sourceTree = "<group>"; };
 		33F2A8482475A45B00B86D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F2A8B02476F04B00B86D7F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep_EmepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.release.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
+		D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.debug.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF05B397F5B6FC1AD4EE8D5 /* Pods_Emep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,12 +95,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3287585D812DB6D6D65D2216 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E73D129A0082EEC923CA517 /* Pods_Emep.framework */,
+				65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */,
+				D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33F2A8152475A45200B86D7F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +119,8 @@
 				33F2A83A2475A45A00B86D7F /* EmepTests */,
 				33F2A8452475A45A00B86D7F /* EmepUITests */,
 				33F2A81F2475A45200B86D7F /* Products */,
+				FFD3ABD1F9D3306EBEA94FAA /* Pods */,
+				3287585D812DB6D6D65D2216 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +196,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FFD3ABD1F9D3306EBEA94FAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */,
+				045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */,
+				F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */,
+				8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */,
+				E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */,
+				083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +216,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A84B2475A45B00B86D7F /* Build configuration list for PBXNativeTarget "Emep" */;
 			buildPhases = (
+				E195BAF6A114159466E12C2A /* [CP] Check Pods Manifest.lock */,
+				86304E92247835E600A9BF29 /* Run Script */,
 				33F2A81A2475A45200B86D7F /* Sources */,
 				33F2A81B2475A45200B86D7F /* Frameworks */,
 				33F2A81C2475A45200B86D7F /* Resources */,
@@ -193,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A84E2475A45B00B86D7F /* Build configuration list for PBXNativeTarget "EmepTests" */;
 			buildPhases = (
+				FCF20537D4709F3E0C89E886 /* [CP] Check Pods Manifest.lock */,
 				33F2A8332475A45A00B86D7F /* Sources */,
 				33F2A8342475A45A00B86D7F /* Frameworks */,
 				33F2A8352475A45A00B86D7F /* Resources */,
@@ -211,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A8512475A45B00B86D7F /* Build configuration list for PBXNativeTarget "EmepUITests" */;
 			buildPhases = (
+				58CC1E5F06E3305035F01B9C /* [CP] Check Pods Manifest.lock */,
 				33F2A83E2475A45A00B86D7F /* Sources */,
 				33F2A83F2475A45A00B86D7F /* Frameworks */,
 				33F2A8402475A45A00B86D7F /* Resources */,
@@ -298,6 +342,93 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58CC1E5F06E3305035F01B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emep-EmepUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86304E92247835E600A9BF29 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		E195BAF6A114159466E12C2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCF20537D4709F3E0C89E886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmepTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33F2A81A2475A45200B86D7F /* Sources */ = {
@@ -478,6 +609,7 @@
 		};
 		33F2A84C2475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +628,7 @@
 		};
 		33F2A84D2475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -514,6 +647,7 @@
 		};
 		33F2A84F2475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +670,7 @@
 		};
 		33F2A8502475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -558,6 +693,7 @@
 		};
 		33F2A8522475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +714,7 @@
 		};
 		33F2A8532475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
