@@ -16,5 +16,4 @@ EMEP will be a health application that will allow the user to store and retrieve
 
 ## Service Needs
 
-Provide users with a secure, fast and easy to use interface to store/ retrieve sensitive medical information.
-
+Provide users with a secure, fast and easy to use interface to store/ retrieve sensitive medical information
