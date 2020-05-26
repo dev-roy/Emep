@@ -23,6 +23,7 @@
 		33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A83B2475A45A00B86D7F /* EmepTests.swift */; };
 		33F2A8472475A45B00B86D7F /* EmepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A8462475A45B00B86D7F /* EmepUITests.swift */; };
 		427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */; };
+		F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
 		D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.debug.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 		33F2A8B22476F5DB00B86D7F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD3CC5247D92EB00BE3B15 /* View Controllers */,
 				33F2A8272475A45200B86D7F /* Main.storyboard */,
 				335B67E02477FDE300CE67A5 /* MyRecords.storyboard */,
 				335B67E22477FDFD00CE67A5 /* Profile.storyboard */,
@@ -194,6 +197,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0FD3CC5247D92EB00BE3B15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		FFD3ABD1F9D3306EBEA94FAA /* Pods */ = {
@@ -438,6 +449,7 @@
 				33F2A82C2475A45200B86D7F /* Emep.xcdatamodeld in Sources */,
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
+				F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */,
 				33F2A8242475A45200B86D7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
