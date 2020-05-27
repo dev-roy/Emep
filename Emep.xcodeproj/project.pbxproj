@@ -23,6 +23,13 @@
 		33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A83B2475A45A00B86D7F /* EmepTests.swift */; };
 		33F2A8472475A45B00B86D7F /* EmepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A8462475A45B00B86D7F /* EmepUITests.swift */; };
 		427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */; };
+		F04F0C7A247EB375006B3E3A /* InvalidJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F0C79247EB375006B3E3A /* InvalidJSON.json */; };
+		F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F0C7B247EB903006B3E3A /* DateUtil.swift */; };
+		F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC118247E925E00BF32B4 /* CalendarResponse.swift */; };
+		F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC11A247E929F00BF32B4 /* Appointment.swift */; };
+		F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */; };
+		F0EBC123247E968500BF32B4 /* CalendarResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */; };
+		F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */; };
 		F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +79,13 @@
 		CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
 		D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.debug.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F04F0C79247EB375006B3E3A /* InvalidJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidJSON.json; sourceTree = "<group>"; };
+		F04F0C7B247EB903006B3E3A /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		F0EBC118247E925E00BF32B4 /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
+		F0EBC11A247E929F00BF32B4 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModelTest.swift; sourceTree = "<group>"; };
+		F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CalendarResponseModel.json; sourceTree = "<group>"; };
+		F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
 		F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +153,7 @@
 		33F2A8202475A45200B86D7F /* Emep */ = {
 			isa = PBXGroup;
 			children = (
+				F0EBC11C247E932F00BF32B4 /* Utils */,
 				33F2A8B12476F5B100B86D7F /* Model */,
 				33F2A8B22476F5DB00B86D7F /* View */,
 				33F2A8B32476F5F800B86D7F /* ViewModel */,
@@ -157,8 +172,10 @@
 		33F2A83A2475A45A00B86D7F /* EmepTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0EBC11F247E964000BF32B4 /* Models */,
 				33F2A83B2475A45A00B86D7F /* EmepTests.swift */,
 				33F2A83D2475A45A00B86D7F /* Info.plist */,
+				F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */,
 			);
 			path = EmepTests;
 			sourceTree = "<group>";
@@ -175,6 +192,7 @@
 		33F2A8B12476F5B100B86D7F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0FD3CC8247D9A0E00BE3B15 /* Calendar */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,12 +217,39 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F0EBC11C247E932F00BF32B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F04F0C7B247EB903006B3E3A /* DateUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F0EBC11F247E964000BF32B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F04F0C79247EB375006B3E3A /* InvalidJSON.json */,
+				F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */,
+				F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F0FD3CC5247D92EB00BE3B15 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F0FD3CC8247D9A0E00BE3B15 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F0EBC118247E925E00BF32B4 /* CalendarResponse.swift */,
+				F0EBC11A247E929F00BF32B4 /* Appointment.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		FFD3ABD1F9D3306EBEA94FAA /* Pods */ = {
@@ -342,6 +387,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EBC123247E968500BF32B4 /* CalendarResponseModel.json in Resources */,
+				F04F0C7A247EB375006B3E3A /* InvalidJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +497,9 @@
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
 				F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */,
+				F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */,
+				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
+				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
 				33F2A8242475A45200B86D7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */,
 				33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */,
+				F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
