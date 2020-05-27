@@ -274,6 +274,7 @@
 				33F2A81A2475A45200B86D7F /* Sources */,
 				33F2A81B2475A45200B86D7F /* Frameworks */,
 				33F2A81C2475A45200B86D7F /* Resources */,
+				15708D63519281090DB24464 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +312,7 @@
 				33F2A83E2475A45A00B86D7F /* Sources */,
 				33F2A83F2475A45A00B86D7F /* Frameworks */,
 				33F2A8402475A45A00B86D7F /* Resources */,
+				ADCF240D10DA223028F477C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +401,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15708D63519281090DB24464 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		58CC1E5F06E3305035F01B9C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +457,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		ADCF240D10DA223028F477C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		E195BAF6A114159466E12C2A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

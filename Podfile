@@ -7,6 +7,7 @@ target 'Emep' do
 
   # Pods for Emep
   pod 'SwiftLint', :inhibit_warnings => true
+  pod 'TimelineTableViewCell'
 
   target 'EmepTests' do
     inherit! :search_paths
