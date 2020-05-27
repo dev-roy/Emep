@@ -17,3 +17,14 @@ struct CalendarResponse: Codable {
     let earliestAppointmentDate: Int
     let appointments: [Appointment]
 }
+
+extension CalendarResponse {
+    static func loadDummyData() -> CalendarResponse {
+        return CalendarResponse(
+            canCreateAppointments: true,
+            latestAppointmentDate: 1590518639,
+            earliestAppointmentDate: 1430505839,
+            appointments: [
+        ])
+    }
+}
