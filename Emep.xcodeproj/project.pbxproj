@@ -30,7 +30,6 @@
 		F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */; };
 		F0EBC123247E968500BF32B4 /* CalendarResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */; };
 		F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */; };
-		F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +85,6 @@
 		F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModelTest.swift; sourceTree = "<group>"; };
 		F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CalendarResponseModel.json; sourceTree = "<group>"; };
 		F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
-		F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,11 +198,10 @@
 		33F2A8B22476F5DB00B86D7F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F0FD3CC5247D92EB00BE3B15 /* View Controllers */,
+				F04F0C7D247ED285006B3E3A /* Calendar */,
 				33F2A8272475A45200B86D7F /* Main.storyboard */,
 				335B67E02477FDE300CE67A5 /* MyRecords.storyboard */,
 				335B67E22477FDFD00CE67A5 /* Profile.storyboard */,
-				335B67E42477FE1000CE67A5 /* Calendar.storyboard */,
 				335B67E62477FE1E00CE67A5 /* Settings.storyboard */,
 			);
 			path = View;
@@ -215,6 +212,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F04F0C7D247ED285006B3E3A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				335B67E42477FE1000CE67A5 /* Calendar.storyboard */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		F0EBC11C247E932F00BF32B4 /* Utils */ = {
@@ -233,14 +238,6 @@
 				F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F0FD3CC5247D92EB00BE3B15 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F0FD3CC8247D9A0E00BE3B15 /* Calendar */ = {
@@ -496,7 +493,6 @@
 				33F2A82C2475A45200B86D7F /* Emep.xcdatamodeld in Sources */,
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
-				F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */,
 				F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */,
 				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
 				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
