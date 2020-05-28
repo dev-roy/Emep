@@ -11,9 +11,6 @@ import Foundation
 struct CalendarResponse: Codable {
     let canCreateAppointments: Bool
     let latestAppointmentDate: Int
-    var appointmentDate: String {
-        return DateUtil.isoToTimeString(isoTime: latestAppointmentDate)
-    }
     let earliestAppointmentDate: Int
     let appointments: [Appointment]
 }
@@ -25,6 +22,24 @@ extension CalendarResponse {
             latestAppointmentDate: 1590518639,
             earliestAppointmentDate: 1430505839,
             appointments: [
+                Appointment(date: 1590512639, type: "", title: "A title", description: "A description", isEditable: true)
         ])
+    }
+    
+    func getAppointmentsYears() -> [Int] {
+        let yearGrouped = Dictionary(grouping: appointments) { $0.year }
+        return Array(yearGrouped.keys).sorted(by: { $0 < $1 })
+    }
+
+    func groupAppointments() -> [Int: [Appointment]] {
+        let yearGrouped = Dictionary(grouping: appointments) { $0.year }
+        var yearIndexGrouped: [Int: [Appointment]] = [:]
+        Array(yearGrouped.keys)
+            .sorted(by: { $0 < $1 })
+            .enumerated()
+            .forEach { (index, key) in
+            yearIndexGrouped[index] = yearGrouped[key]
+        }
+        return yearIndexGrouped
     }
 }
