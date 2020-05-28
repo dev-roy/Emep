@@ -15,19 +15,25 @@ final class DateUtil: NSObject {
         return formater
     }()
     
-    static let mediumDateNoTimeFormatter: DateFormatter = {
+    private static let mediumDateNoTimeFormatter: DateFormatter = {
         let formater = DateFormatter()
         formater.dateStyle = .medium
         formater.timeStyle = .none
         return formater
     }()
     
-    static func isoToDate(isoTime: Int) -> Date {
-        return Date(timeIntervalSince1970: TimeInterval(isoTime))
+    static func epocToDate(_ epocTime: Int) -> Date {
+        return Date(timeIntervalSince1970: TimeInterval(epocTime))
     }
     
-    static func isoToTimeString(isoTime: Int) -> String {
-        let date = isoToDate(isoTime: isoTime)
+    static func epocToTimeString(_ epocTime: Int) -> String {
+        let date = epocToDate(epocTime)
         return mediumDateNoTimeFormatter.string(from: date)
+    }
+    
+    static func getYearFromEpoc(_ epocTime: Int) -> Int {
+        let date = epocToDate(epocTime)
+        let calendar = Calendar.current
+        return calendar.component(.year, from: date)
     }
 }
