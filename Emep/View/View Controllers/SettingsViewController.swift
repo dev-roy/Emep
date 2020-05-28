@@ -1,17 +1,18 @@
 //
-//  ViewController.swift
+//  SettingsViewController.swift
 //  Emep
 //
-//  Created by Rodrigo Buendia Ramos on 5/20/20.
+//  Created by Hugo Flores Perez on 5/26/20.
 //  Copyright © 2020 Rodrigo Buendia Ramos. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 }

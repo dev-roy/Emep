@@ -1,0 +1,35 @@
+{
+    "canCreateAppointments": true,
+    "latestAppointmentDate": 1590518639,
+    "earliestAppointmentDate": 1430505839,
+    "appointments": [
+        {
+            "date": 1432665839,
+            "type": "operation",
+            "title": "Ear Operation",
+            "description": "Had an small ear operation because of some sand",
+            "isEditable": false
+        },
+        {
+            "date": 1432320239,
+            "type": "check",
+            "title": "Weelky check",
+            "description": "Weelky check at the doctor. Nothing bad",
+            "isEditable": false
+        },
+        {
+            "date": 1430505839,
+            "type": "vaccine",
+            "title": "Influenza Vaccine",
+            "description": "Seasonal influenza vaccine",
+            "isEditable": false
+        },
+        {
+            "date": 1432925039,
+            "type": "appointment",
+            "title": "Appointment at the doctor",
+            "description": "Felt bad since yesterday. I'll get checked",
+            "isEditable": false
+        }
+    ]
+}
