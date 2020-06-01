@@ -7,6 +7,9 @@ target 'Emep' do
 
   # Pods for Emep
   pod 'SwiftLint', :inhibit_warnings => true
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
 
   target 'EmepTests' do
     inherit! :search_paths
