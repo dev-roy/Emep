@@ -1,20 +1,16 @@
 PODS:
   - SwiftLint (0.39.2)
-  - TimelineTableViewCell (2.2.1)
 
 DEPENDENCIES:
   - SwiftLint
-  - TimelineTableViewCell
 
 SPEC REPOS:
   trunk:
     - SwiftLint
-    - TimelineTableViewCell
 
 SPEC CHECKSUMS:
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
-  TimelineTableViewCell: b2721a3c1f17c4a4950ae442f45cd4e8669a2750
 
-PODFILE CHECKSUM: 51082e52da61cce7126870e0fed88ed22b956f8a
+PODFILE CHECKSUM: 11c1c45c381e19deb59eccac758f396e1de67e11
 
 COCOAPODS: 1.9.1
