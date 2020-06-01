@@ -38,17 +38,30 @@ class CalendarModelTest: XCTestCase {
         }
     }
     
+    func testAppointmentTypeDecoding() {
+        let bundle = Bundle(for: type(of: self))
+        let result: Result<CalendarResponse, JSONUtilError> = JSONUtil.loadJSON(forBunle: bundle, resourceName: "CalendarResponseModel")
+        switch result {
+        case .success(let response):
+            XCTAssertEqual(response.appointments[0].type, AppointmentType.undefined)
+            XCTAssertEqual(response.appointments[1].type, AppointmentType.fracture)
+            XCTAssertEqual(response.appointments[2].type, AppointmentType.checkup)
+        case .failure(let error):
+            XCTFail("The model did not parse the JSON successfully. \(error)")
+        }
+    }
+    /*
     func test_groupAppointmentsByYearIndex() {
         let testData = CalendarResponse(
             canCreateAppointments: false,
             latestAppointmentDate: 1,
             earliestAppointmentDate: 1,
             appointments: [
-                Appointment(date: 315685006, type: "", title: "", description: "", isEditable: true),
-                Appointment(date: 1590603406, type: "", title: "", description: "", isEditable: true),
-                Appointment(date: 1577902606, type: "", title: "", description: "", isEditable: true),
-                Appointment(date: 1609525006, type: "", title: "", description: "", isEditable: true),
-                Appointment(date: 1609611406, type: "", title: "", description: "", isEditable: true)
+                Appointment(date: 315685006, title: "", description: "", type: .undefined, isEditable: true),
+                Appointment(date: 1590603406, title: "", description: "", type: .undefined, isEditable: true),
+                Appointment(date: 1577902606, title: "", description: "", type: .undefined, isEditable: true),
+                Appointment(date: 1609525006, title: "", description: "", type: .undefined, isEditable: true),
+                Appointment(date: 1609611406, title: "", description: "", type: .undefined, isEditable: true)
         ])
         let result = testData.groupAppointments()
         XCTAssertEqual(result.count, 3)
@@ -69,4 +82,5 @@ class CalendarModelTest: XCTestCase {
         }
         XCTAssertEqual(thirdArray.count, 2)
     }
+    */
 }
