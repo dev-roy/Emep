@@ -9,12 +9,6 @@
 import Foundation
 
 final class DateUtil: NSObject {
-    private static let isoDateFormatter: DateFormatter = {
-        let formater = DateFormatter()
-        formater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        return formater
-    }()
-    
     private static let mediumDateNoTimeFormatter: DateFormatter = {
         let formater = DateFormatter()
         formater.dateStyle = .medium
