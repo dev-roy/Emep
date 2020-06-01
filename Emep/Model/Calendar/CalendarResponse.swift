@@ -22,24 +22,11 @@ extension CalendarResponse {
             latestAppointmentDate: 1590518639,
             earliestAppointmentDate: 1430505839,
             appointments: [
-                Appointment(date: 1590512639, type: "", title: "A title", description: "A description", isEditable: true)
+                Appointment(date: 1275069432, title: "Broke my finger", description: "Playing basketball. Didn't had any infection", type: .fracture, isEditable: true),
+                Appointment(date: 1272736632, title: "Weekly Checkup", description: "Weekly checkup at the doctor. Everything went well", type: .checkup, isEditable: true),
+                Appointment(date: 1338295640, title: "Vaccine", description: "For tetanus", type: .vaccine, isEditable: true),
+                Appointment(date: 1559393071, title: "Nose operation", description: "It was too big", type: .operation, isEditable: true),
+                Appointment(date: 1556714671, title: "Undefined", description: "Undefined", type: .undefined, isEditable: true)
         ])
-    }
-    
-    func getAppointmentsYears() -> [Int] {
-        let yearGrouped = Dictionary(grouping: appointments) { $0.year }
-        return Array(yearGrouped.keys).sorted(by: { $0 < $1 })
-    }
-
-    func groupAppointments() -> [Int: [Appointment]] {
-        let yearGrouped = Dictionary(grouping: appointments) { $0.year }
-        var yearIndexGrouped: [Int: [Appointment]] = [:]
-        Array(yearGrouped.keys)
-            .sorted(by: { $0 < $1 })
-            .enumerated()
-            .forEach { (index, key) in
-            yearIndexGrouped[index] = yearGrouped[key]
-        }
-        return yearIndexGrouped
     }
 }
