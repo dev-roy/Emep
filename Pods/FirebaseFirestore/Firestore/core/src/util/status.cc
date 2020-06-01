@@ -28,7 +28,7 @@ namespace firestore {
 namespace util {
 
 Status::Status(Error code, std::string msg) {
-  HARD_ASSERT(code != Error::kErrorOk);
+  HARD_ASSERT(code != Error::kOk);
   state_ = State::MakePtr(code, std::move(msg));
 }
 
@@ -67,7 +67,7 @@ Status& Status::WithPlatformError(std::unique_ptr<PlatformError> error) {
   HARD_ASSERT(!ok(), "Platform errors should not be applied to Status::OK()");
   if (IsMovedFrom()) {
     std::string message = moved_from_message();
-    state_ = State::MakePtr(Error::kErrorInternal, std::move(message));
+    state_ = State::MakePtr(Error::kInternal, std::move(message));
   }
   state_->platform_error = std::move(error);
   return *this;
@@ -108,52 +108,52 @@ std::string Status::ToString() const {
   } else {
     std::string result;
     switch (code()) {
-      case Error::kErrorCancelled:
+      case Error::kCancelled:
         result = "Cancelled";
         break;
-      case Error::kErrorUnknown:
+      case Error::kUnknown:
         result = "Unknown";
         break;
-      case Error::kErrorInvalidArgument:
+      case Error::kInvalidArgument:
         result = "Invalid argument";
         break;
-      case Error::kErrorDeadlineExceeded:
+      case Error::kDeadlineExceeded:
         result = "Deadline exceeded";
         break;
-      case Error::kErrorNotFound:
+      case Error::kNotFound:
         result = "Not found";
         break;
-      case Error::kErrorAlreadyExists:
+      case Error::kAlreadyExists:
         result = "Already exists";
         break;
-      case Error::kErrorPermissionDenied:
+      case Error::kPermissionDenied:
         result = "Permission denied";
         break;
-      case Error::kErrorUnauthenticated:
+      case Error::kUnauthenticated:
         result = "Unauthenticated";
         break;
-      case Error::kErrorResourceExhausted:
+      case Error::kResourceExhausted:
         result = "Resource exhausted";
         break;
-      case Error::kErrorFailedPrecondition:
+      case Error::kFailedPrecondition:
         result = "Failed precondition";
         break;
-      case Error::kErrorAborted:
+      case Error::kAborted:
         result = "Aborted";
         break;
-      case Error::kErrorOutOfRange:
+      case Error::kOutOfRange:
         result = "Out of range";
         break;
-      case Error::kErrorUnimplemented:
+      case Error::kUnimplemented:
         result = "Unimplemented";
         break;
-      case Error::kErrorInternal:
+      case Error::kInternal:
         result = "Internal";
         break;
-      case Error::kErrorUnavailable:
+      case Error::kUnavailable:
         result = "Unavailable";
         break;
-      case Error::kErrorDataLoss:
+      case Error::kDataLoss:
         result = "Data loss";
         break;
       default:

@@ -32,36 +32,36 @@ namespace util {
 static Error CodeForLastError(DWORD error) {
   switch (error) {
     case ERROR_SUCCESS:
-      return Error::kErrorOk;
+      return Error::kOk;
 
-      // return Error::kErrorInternal;
+      // return Error::kInternal;
 
     case ERROR_INVALID_FUNCTION:
     case ERROR_INVALID_HANDLE:
     case ERROR_INVALID_NAME:
-      return Error::kErrorInvalidArgument;
+      return Error::kInvalidArgument;
 
-      // return Error::kErrorDeadlineExceeded;
+      // return Error::kDeadlineExceeded;
 
     case ERROR_FILE_NOT_FOUND:
     case ERROR_PATH_NOT_FOUND:
     case ERROR_INVALID_DRIVE:
     case ERROR_BAD_NETPATH:
     case ERROR_DEV_NOT_EXIST:
-      return Error::kErrorNotFound;
+      return Error::kNotFound;
 
     case ERROR_FILE_EXISTS:
     case ERROR_ALREADY_EXISTS:
-      return Error::kErrorAlreadyExists;
+      return Error::kAlreadyExists;
 
     case ERROR_ACCESS_DENIED:
     case ERROR_INVALID_ACCESS:
     case ERROR_SHARING_VIOLATION:
     case ERROR_WRITE_PROTECT:
     case ERROR_LOCK_VIOLATION:
-      return Error::kErrorPermissionDenied;
+      return Error::kPermissionDenied;
 
-      // return Error::kErrorFailedPrecondition;
+      // return Error::kFailedPrecondition;
 
     case ERROR_TOO_MANY_OPEN_FILES:
     case ERROR_NOT_ENOUGH_MEMORY:
@@ -69,22 +69,22 @@ static Error CodeForLastError(DWORD error) {
     case ERROR_NO_MORE_FILES:
     case ERROR_DISK_FULL:
     case ERROR_HANDLE_DISK_FULL:
-      return Error::kErrorResourceExhausted;
+      return Error::kResourceExhausted;
 
-      // return Error::kErrorOutOfRange;
+      // return Error::kOutOfRange;
 
     case ERROR_CALL_NOT_IMPLEMENTED:
-      return Error::kErrorUnimplemented;
+      return Error::kUnimplemented;
 
     case ERROR_NOT_READY:
-      return Error::kErrorUnavailable;
+      return Error::kUnavailable;
 
-      // return Error::kErrorAborted;
+      // return Error::kAborted;
 
-      // return Error::kErrorCancelled;
+      // return Error::kCancelled;
 
     default:
-      return Error::kErrorUnknown;
+      return Error::kUnknown;
   }
 }
 
