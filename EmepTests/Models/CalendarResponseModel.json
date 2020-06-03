@@ -5,28 +5,28 @@
     "appointments": [
         {
             "date": 1432665839,
-            "type": "operation",
+            "type": "",
             "title": "Ear Operation",
             "description": "Had an small ear operation because of some sand",
             "isEditable": false
         },
         {
             "date": 1432320239,
-            "type": "check",
+            "type": "fracture",
             "title": "Weelky check",
             "description": "Weelky check at the doctor. Nothing bad",
             "isEditable": false
         },
         {
             "date": 1430505839,
-            "type": "vaccine",
+            "type": "checkup",
             "title": "Influenza Vaccine",
             "description": "Seasonal influenza vaccine",
             "isEditable": false
         },
         {
             "date": 1432925039,
-            "type": "appointment",
+            "type": "operation",
             "title": "Appointment at the doctor",
             "description": "Felt bad since yesterday. I'll get checked",
             "isEditable": false

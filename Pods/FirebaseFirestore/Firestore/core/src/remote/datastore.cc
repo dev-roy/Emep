@@ -283,7 +283,7 @@ void Datastore::ResumeRpcWithCredentials(const OnCredentials& on_credentials) {
 }
 
 void Datastore::HandleCallStatus(const Status& status) {
-  if (status.code() == Error::kErrorUnauthenticated) {
+  if (status.code() == Error::kUnauthenticated) {
     credentials_->InvalidateToken();
   }
 }
@@ -298,35 +298,35 @@ void Datastore::RemoveGrpcCall(GrpcCall* to_remove) {
 }
 
 bool Datastore::IsAbortedError(const Status& error) {
-  return error.code() == Error::kErrorAborted;
+  return error.code() == Error::kAborted;
 }
 
 bool Datastore::IsPermanentError(const Status& error) {
   switch (error.code()) {
-    case Error::kErrorOk:
+    case Error::kOk:
       HARD_FAIL("Treated status OK as error");
-    case Error::kErrorCancelled:
-    case Error::kErrorUnknown:
-    case Error::kErrorDeadlineExceeded:
-    case Error::kErrorResourceExhausted:
-    case Error::kErrorInternal:
-    case Error::kErrorUnavailable:
+    case Error::kCancelled:
+    case Error::kUnknown:
+    case Error::kDeadlineExceeded:
+    case Error::kResourceExhausted:
+    case Error::kInternal:
+    case Error::kUnavailable:
       // Unauthenticated means something went wrong with our token and we need
       // to retry with new credentials which will happen automatically.
-    case Error::kErrorUnauthenticated:
+    case Error::kUnauthenticated:
       return false;
-    case Error::kErrorInvalidArgument:
-    case Error::kErrorNotFound:
-    case Error::kErrorAlreadyExists:
-    case Error::kErrorPermissionDenied:
-    case Error::kErrorFailedPrecondition:
-    case Error::kErrorAborted:
+    case Error::kInvalidArgument:
+    case Error::kNotFound:
+    case Error::kAlreadyExists:
+    case Error::kPermissionDenied:
+    case Error::kFailedPrecondition:
+    case Error::kAborted:
       // Aborted might be retried in some scenarios, but that is dependant on
       // the context and should handled individually by the calling code.
       // See https://cloud.google.com/apis/design/errors
-    case Error::kErrorOutOfRange:
-    case Error::kErrorUnimplemented:
-    case Error::kErrorDataLoss:
+    case Error::kOutOfRange:
+    case Error::kUnimplemented:
+    case Error::kDataLoss:
       return true;
   }
 

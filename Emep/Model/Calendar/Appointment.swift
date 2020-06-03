@@ -8,8 +8,22 @@
 
 import Foundation
 
+enum AppointmentType: String, Codable {
+    case fracture
+    case checkup
+    case vaccine
+    case operation
+    case undefined
+
+    init(from decoder: Decoder) throws {
+        self = try Self(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? Self.undefined
+    }
+}
+
 struct Appointment: Codable {
     let date: Int
-    let type, title, description: String
+    let title, description: String
+    let type: AppointmentType
     let isEditable: Bool
+    var year: Int { DateUtil.getYearFromEpoc(date) }
 }
