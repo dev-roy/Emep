@@ -12,6 +12,7 @@ target 'Emep' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'TimelineTableViewCell'
 
   target 'EmepTests' do
     inherit! :search_paths
