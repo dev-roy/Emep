@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */; };
+		1B76845BE741841FF79124F1 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D91C1436A46F2E38E130D /* Pods_EmepTests.framework */; };
 		21F6B74124784EA400F505FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21F6B74024784EA400F505FC /* GoogleService-Info.plist */; };
-		2EF05B397F5B6FC1AD4EE8D5 /* Pods_Emep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E73D129A0082EEC923CA517 /* Pods_Emep.framework */; };
 		335B67E12477FDE300CE67A5 /* MyRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E02477FDE300CE67A5 /* MyRecords.storyboard */; };
 		335B67E32477FDFD00CE67A5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E22477FDFD00CE67A5 /* Profile.storyboard */; };
 		335B67E52477FE1000CE67A5 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E42477FE1000CE67A5 /* Calendar.storyboard */; };
@@ -23,15 +22,23 @@
 		33F2A8312475A45A00B86D7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F2A82F2475A45A00B86D7F /* LaunchScreen.storyboard */; };
 		33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A83B2475A45A00B86D7F /* EmepTests.swift */; };
 		33F2A8472475A45B00B86D7F /* EmepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2A8462475A45B00B86D7F /* EmepUITests.swift */; };
-		427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */; };
+		36A8054B08C983DD8B24B59D /* Pods_Emep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96128D58B478F3E0C2E4551C /* Pods_Emep.framework */; };
+		4D733E7939C819314928D73F /* Pods_Emep_EmepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AF668F41575A52396A8058 /* Pods_Emep_EmepUITests.framework */; };
+		F0481C14248528B5005F9C0F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0481C13248528B5005F9C0F /* UIView+Ext.swift */; };
+		F0481C1724853E4F005F9C0F /* TimelineViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0481C1624853E4F005F9C0F /* TimelineViewModelTest.swift */; };
+		F0481C19248542AF005F9C0F /* TimelineCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0481C18248542AF005F9C0F /* TimelineCellViewModelTest.swift */; };
+		F0481C1B248547D8005F9C0F /* Dictionary+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0481C1A248547D8005F9C0F /* Dictionary+Ext.swift */; };
 		F04F0C7A247EB375006B3E3A /* InvalidJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F0C79247EB375006B3E3A /* InvalidJSON.json */; };
 		F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F0C7B247EB903006B3E3A /* DateUtil.swift */; };
+		F04F0C7F247ED966006B3E3A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F0C7E247ED966006B3E3A /* CalendarViewController.swift */; };
+		F04F0C81247EDF8C006B3E3A /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F0C80247EDF8C006B3E3A /* TimelineViewModel.swift */; };
+		F04F0C84247EE114006B3E3A /* DateUtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F0C83247EE114006B3E3A /* DateUtilTest.swift */; };
 		F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC118247E925E00BF32B4 /* CalendarResponse.swift */; };
 		F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC11A247E929F00BF32B4 /* Appointment.swift */; };
 		F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */; };
 		F0EBC123247E968500BF32B4 /* CalendarResponseModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */; };
 		F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */; };
-		F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */; };
+		F0F36D352481441100665ADC /* TimelineCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F36D342481441100665ADC /* TimelineCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.release.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.release.xcconfig"; sourceTree = "<group>"; };
-		083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.release.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.release.xcconfig"; sourceTree = "<group>"; };
-		1E73D129A0082EEC923CA517 /* Pods_Emep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C2B5D81D4ED1AA4F65A827C /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
 		21F6B74024784EA400F505FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		335B67E02477FDE300CE67A5 /* MyRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRecords.storyboard; sourceTree = "<group>"; };
 		335B67E22477FDFD00CE67A5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -76,20 +81,29 @@
 		33F2A8462475A45B00B86D7F /* EmepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmepUITests.swift; sourceTree = "<group>"; };
 		33F2A8482475A45B00B86D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F2A8B02476F04B00B86D7F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep_EmepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.release.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
-		D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.debug.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35784770B4E3E7CCF0873859 /* Pods-EmepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.release.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.release.xcconfig"; sourceTree = "<group>"; };
+		3ADA52A219759DE4A3B5C24E /* Pods-EmepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.debug.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		42699117F47F5BFDF1870F99 /* Pods-Emep-EmepUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.release.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.release.xcconfig"; sourceTree = "<group>"; };
+		96128D58B478F3E0C2E4551C /* Pods_Emep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB727E575EAE99E721F651CF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1AF668F41575A52396A8058 /* Pods_Emep_EmepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep_EmepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95D91C1436A46F2E38E130D /* Pods_EmepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83D0F30B033EDC75B63100E /* Pods-Emep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.release.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.release.xcconfig"; sourceTree = "<group>"; };
+		F0481C13248528B5005F9C0F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		F0481C1624853E4F005F9C0F /* TimelineViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModelTest.swift; sourceTree = "<group>"; };
+		F0481C18248542AF005F9C0F /* TimelineCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellViewModelTest.swift; sourceTree = "<group>"; };
+		F0481C1A248547D8005F9C0F /* Dictionary+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ext.swift"; sourceTree = "<group>"; };
 		F04F0C79247EB375006B3E3A /* InvalidJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidJSON.json; sourceTree = "<group>"; };
 		F04F0C7B247EB903006B3E3A /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		F04F0C7E247ED966006B3E3A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F04F0C80247EDF8C006B3E3A /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimelineViewModel.swift; path = Emep/View/Calendar/TimelineViewModel.swift; sourceTree = SOURCE_ROOT; };
+		F04F0C83247EE114006B3E3A /* DateUtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilTest.swift; sourceTree = "<group>"; };
 		F0EBC118247E925E00BF32B4 /* CalendarResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarResponse.swift; sourceTree = "<group>"; };
 		F0EBC11A247E929F00BF32B4 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		F0EBC120247E966700BF32B4 /* CalendarModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModelTest.swift; sourceTree = "<group>"; };
 		F0EBC122247E968500BF32B4 /* CalendarResponseModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CalendarResponseModel.json; sourceTree = "<group>"; };
 		F0EBC124247E9AC600BF32B4 /* JSONUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
-		F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep-EmepUITests.debug.xcconfig"; path = "Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0F36D342481441100665ADC /* TimelineCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EF05B397F5B6FC1AD4EE8D5 /* Pods_Emep.framework in Frameworks */,
+				36A8054B08C983DD8B24B59D /* Pods_Emep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427E6F509C56C21D27CBD2C9 /* Pods_EmepTests.framework in Frameworks */,
+				1B76845BE741841FF79124F1 /* Pods_EmepTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,19 +127,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */,
+				4D733E7939C819314928D73F /* Pods_Emep_EmepUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3287585D812DB6D6D65D2216 /* Frameworks */ = {
+		0B0192FF20F480F7B2B7CAF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E73D129A0082EEC923CA517 /* Pods_Emep.framework */,
-				65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */,
-				D13A8658A848C07DD3B34599 /* Pods_EmepTests.framework */,
+				96128D58B478F3E0C2E4551C /* Pods_Emep.framework */,
+				D1AF668F41575A52396A8058 /* Pods_Emep_EmepUITests.framework */,
+				D95D91C1436A46F2E38E130D /* Pods_EmepTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,7 +152,7 @@
 				33F2A8452475A45A00B86D7F /* EmepUITests */,
 				33F2A81F2475A45200B86D7F /* Products */,
 				FFD3ABD1F9D3306EBEA94FAA /* Pods */,
-				3287585D812DB6D6D65D2216 /* Frameworks */,
+				0B0192FF20F480F7B2B7CAF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +189,8 @@
 		33F2A83A2475A45A00B86D7F /* EmepTests */ = {
 			isa = PBXGroup;
 			children = (
+				F0481C1524853A5A005F9C0F /* View Models */,
+				F04F0C82247EE0FB006B3E3A /* Utils */,
 				F0EBC11F247E964000BF32B4 /* Models */,
 				33F2A83B2475A45A00B86D7F /* EmepTests.swift */,
 				33F2A83D2475A45A00B86D7F /* Info.plist */,
@@ -203,11 +219,10 @@
 		33F2A8B22476F5DB00B86D7F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F0FD3CC5247D92EB00BE3B15 /* View Controllers */,
+				F04F0C7D247ED285006B3E3A /* Calendar */,
 				33F2A8272475A45200B86D7F /* Main.storyboard */,
 				335B67E02477FDE300CE67A5 /* MyRecords.storyboard */,
 				335B67E22477FDFD00CE67A5 /* Profile.storyboard */,
-				335B67E42477FE1000CE67A5 /* Calendar.storyboard */,
 				335B67E62477FE1E00CE67A5 /* Settings.storyboard */,
 			);
 			path = View;
@@ -216,13 +231,42 @@
 		33F2A8B32476F5F800B86D7F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F0F36D33248143ED00665ADC /* Cells */,
+				F04F0C80247EDF8C006B3E3A /* TimelineViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0481C1524853A5A005F9C0F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0481C1624853E4F005F9C0F /* TimelineViewModelTest.swift */,
+				F0481C18248542AF005F9C0F /* TimelineCellViewModelTest.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		F04F0C7D247ED285006B3E3A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				335B67E42477FE1000CE67A5 /* Calendar.storyboard */,
+				F04F0C7E247ED966006B3E3A /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F04F0C82247EE0FB006B3E3A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F04F0C83247EE114006B3E3A /* DateUtilTest.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F0EBC11C247E932F00BF32B4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F0F36D362481857C00665ADC /* Extensions */,
 				F04F0C7B247EB903006B3E3A /* DateUtil.swift */,
 			);
 			path = Utils;
@@ -238,12 +282,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F0FD3CC5247D92EB00BE3B15 /* View Controllers */ = {
+		F0F36D33248143ED00665ADC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F0FD3CC6247D93BD00BE3B15 /* SettingsViewController.swift */,
+				F0F36D342481441100665ADC /* TimelineCellViewModel.swift */,
 			);
-			path = "View Controllers";
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F0F36D362481857C00665ADC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0481C13248528B5005F9C0F /* UIView+Ext.swift */,
+				F0481C1A248547D8005F9C0F /* Dictionary+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0FD3CC8247D9A0E00BE3B15 /* Calendar */ = {
@@ -258,12 +311,12 @@
 		FFD3ABD1F9D3306EBEA94FAA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */,
-				045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */,
-				F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */,
-				8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */,
-				E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */,
-				083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */,
+				0C2B5D81D4ED1AA4F65A827C /* Pods-Emep.debug.xcconfig */,
+				E83D0F30B033EDC75B63100E /* Pods-Emep.release.xcconfig */,
+				BB727E575EAE99E721F651CF /* Pods-Emep-EmepUITests.debug.xcconfig */,
+				42699117F47F5BFDF1870F99 /* Pods-Emep-EmepUITests.release.xcconfig */,
+				3ADA52A219759DE4A3B5C24E /* Pods-EmepTests.debug.xcconfig */,
+				35784770B4E3E7CCF0873859 /* Pods-EmepTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -275,12 +328,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A84B2475A45B00B86D7F /* Build configuration list for PBXNativeTarget "Emep" */;
 			buildPhases = (
-				E195BAF6A114159466E12C2A /* [CP] Check Pods Manifest.lock */,
+				8831EC7538BBA6CAAF8AD62E /* [CP] Check Pods Manifest.lock */,
 				86304E92247835E600A9BF29 /* Run Script */,
 				33F2A81A2475A45200B86D7F /* Sources */,
 				33F2A81B2475A45200B86D7F /* Frameworks */,
 				33F2A81C2475A45200B86D7F /* Resources */,
-				400C7E6F50273CAF70EF73C4 /* [CP] Embed Pods Frameworks */,
+				5959729AC17C2A551379A1CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,7 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A84E2475A45B00B86D7F /* Build configuration list for PBXNativeTarget "EmepTests" */;
 			buildPhases = (
-				FCF20537D4709F3E0C89E886 /* [CP] Check Pods Manifest.lock */,
+				4CBCD2E78CD4BBD8D8122D67 /* [CP] Check Pods Manifest.lock */,
 				33F2A8332475A45A00B86D7F /* Sources */,
 				33F2A8342475A45A00B86D7F /* Frameworks */,
 				33F2A8352475A45A00B86D7F /* Resources */,
@@ -314,11 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33F2A8512475A45B00B86D7F /* Build configuration list for PBXNativeTarget "EmepUITests" */;
 			buildPhases = (
-				58CC1E5F06E3305035F01B9C /* [CP] Check Pods Manifest.lock */,
+				F2BAD95797033205F13423AF /* [CP] Check Pods Manifest.lock */,
 				33F2A83E2475A45A00B86D7F /* Sources */,
 				33F2A83F2475A45A00B86D7F /* Frameworks */,
 				33F2A8402475A45A00B86D7F /* Resources */,
-				F5BE6DEAFF603514647000BA /* [CP] Embed Pods Frameworks */,
+				8128CC008A2B9891C8DA3EE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -408,103 +461,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		400C7E6F50273CAF70EF73C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		58CC1E5F06E3305035F01B9C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Emep-EmepUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86304E92247835E600A9BF29 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		E195BAF6A114159466E12C2A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Emep-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5BE6DEAFF603514647000BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FCF20537D4709F3E0C89E886 /* [CP] Check Pods Manifest.lock */ = {
+		4CBCD2E78CD4BBD8D8122D67 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,6 +483,102 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5959729AC17C2A551379A1CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep/Pods-Emep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8128CC008A2B9891C8DA3EE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emep-EmepUITests/Pods-Emep-EmepUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86304E92247835E600A9BF29 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		8831EC7538BBA6CAAF8AD62E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2BAD95797033205F13423AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emep-EmepUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -533,13 +586,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F0C7F247ED966006B3E3A /* CalendarViewController.swift in Sources */,
+				F0F36D352481441100665ADC /* TimelineCellViewModel.swift in Sources */,
 				33F2A82C2475A45200B86D7F /* Emep.xcdatamodeld in Sources */,
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
-				F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */,
 				F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */,
+				F0481C1B248547D8005F9C0F /* Dictionary+Ext.swift in Sources */,
 				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
+				F0481C14248528B5005F9C0F /* UIView+Ext.swift in Sources */,
 				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
+				F04F0C81247EDF8C006B3E3A /* TimelineViewModel.swift in Sources */,
 				33F2A8242475A45200B86D7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +605,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0481C1724853E4F005F9C0F /* TimelineViewModelTest.swift in Sources */,
+				F0481C19248542AF005F9C0F /* TimelineCellViewModelTest.swift in Sources */,
 				F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */,
+				F04F0C84247EE114006B3E3A /* DateUtilTest.swift in Sources */,
 				33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */,
 				F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */,
 			);
@@ -713,7 +773,7 @@
 		};
 		33F2A84C2475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC386C7DE902AA9BDDC37C34 /* Pods-Emep.debug.xcconfig */;
+			baseConfigurationReference = 0C2B5D81D4ED1AA4F65A827C /* Pods-Emep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,7 +792,7 @@
 		};
 		33F2A84D2475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */;
+			baseConfigurationReference = E83D0F30B033EDC75B63100E /* Pods-Emep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -751,7 +811,7 @@
 		};
 		33F2A84F2475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4C44FD65039B6FB30DBC0B0 /* Pods-EmepTests.debug.xcconfig */;
+			baseConfigurationReference = 3ADA52A219759DE4A3B5C24E /* Pods-EmepTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -774,7 +834,7 @@
 		};
 		33F2A8502475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */;
+			baseConfigurationReference = 35784770B4E3E7CCF0873859 /* Pods-EmepTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -797,7 +857,7 @@
 		};
 		33F2A8522475A45B00B86D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F88E52B5287CA1FDF36679BF /* Pods-Emep-EmepUITests.debug.xcconfig */;
+			baseConfigurationReference = BB727E575EAE99E721F651CF /* Pods-Emep-EmepUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -818,7 +878,7 @@
 		};
 		33F2A8532475A45B00B86D7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F40C6E289C02694A48D39DD /* Pods-Emep-EmepUITests.release.xcconfig */;
+			baseConfigurationReference = 42699117F47F5BFDF1870F99 /* Pods-Emep-EmepUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
