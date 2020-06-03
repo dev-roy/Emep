@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseStorage
+
+enum Constants {
+    static let DBREF = Database.database().reference()
+    static let USERREF = DBREF.child("users")
+    static let STORAGEREF = Storage.storage().reference()
+}
+

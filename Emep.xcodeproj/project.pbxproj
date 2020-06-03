@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */; };
+		2133A186248693F500C384A4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133A185248693F500C384A4 /* AuthenticationTests.swift */; };
+		21347A9A2485454600D7279B /* UserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A992485454600D7279B /* UserNetworkManager.swift */; };
+		21347A9C248547AA00D7279B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A9B248547AA00D7279B /* User.swift */; };
+		21347A9E24854C4A00D7279B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A9D24854C4A00D7279B /* Constants.swift */; };
 		21F6B74124784EA400F505FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21F6B74024784EA400F505FC /* GoogleService-Info.plist */; };
 		2EF05B397F5B6FC1AD4EE8D5 /* Pods_Emep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E73D129A0082EEC923CA517 /* Pods_Emep.framework */; };
 		335B67E12477FDE300CE67A5 /* MyRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E02477FDE300CE67A5 /* MyRecords.storyboard */; };
@@ -55,6 +59,10 @@
 		045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.release.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.release.xcconfig"; sourceTree = "<group>"; };
 		083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.release.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E73D129A0082EEC923CA517 /* Pods_Emep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2133A185248693F500C384A4 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		21347A992485454600D7279B /* UserNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkManager.swift; sourceTree = "<group>"; };
+		21347A9B248547AA00D7279B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21347A9D24854C4A00D7279B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21F6B74024784EA400F505FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		335B67E02477FDE300CE67A5 /* MyRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRecords.storyboard; sourceTree = "<group>"; };
 		335B67E22477FDFD00CE67A5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -120,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21347A982485451600D7279B /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				21347A992485454600D7279B /* UserNetworkManager.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		3287585D812DB6D6D65D2216 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +171,7 @@
 		33F2A8202475A45200B86D7F /* Emep */ = {
 			isa = PBXGroup;
 			children = (
+				21347A982485451600D7279B /* APIs */,
 				F0EBC11C247E932F00BF32B4 /* Utils */,
 				33F2A8B12476F5B100B86D7F /* Model */,
 				33F2A8B22476F5DB00B86D7F /* View */,
@@ -168,6 +185,7 @@
 				33F2A8322475A45A00B86D7F /* Info.plist */,
 				21F6B74024784EA400F505FC /* GoogleService-Info.plist */,
 				33F2A82A2475A45200B86D7F /* Emep.xcdatamodeld */,
+				21347A9D24854C4A00D7279B /* Constants.swift */,
 			);
 			path = Emep;
 			sourceTree = "<group>";
@@ -175,6 +193,7 @@
 		33F2A83A2475A45A00B86D7F /* EmepTests */ = {
 			isa = PBXGroup;
 			children = (
+				2133A185248693F500C384A4 /* AuthenticationTests.swift */,
 				F0EBC11F247E964000BF32B4 /* Models */,
 				33F2A83B2475A45A00B86D7F /* EmepTests.swift */,
 				33F2A83D2475A45A00B86D7F /* Info.plist */,
@@ -196,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FD3CC8247D9A0E00BE3B15 /* Calendar */,
+				21347A9B248547AA00D7279B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -534,12 +554,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F2A82C2475A45200B86D7F /* Emep.xcdatamodeld in Sources */,
+				21347A9E24854C4A00D7279B /* Constants.swift in Sources */,
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
 				F0FD3CC7247D93BD00BE3B15 /* SettingsViewController.swift in Sources */,
 				F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */,
 				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
+				21347A9A2485454600D7279B /* UserNetworkManager.swift in Sources */,
 				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
+				21347A9C248547AA00D7279B /* User.swift in Sources */,
 				33F2A8242475A45200B86D7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +574,7 @@
 				F0EBC125247E9AC600BF32B4 /* JSONUtil.swift in Sources */,
 				33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */,
 				F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */,
+				2133A186248693F500C384A4 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
