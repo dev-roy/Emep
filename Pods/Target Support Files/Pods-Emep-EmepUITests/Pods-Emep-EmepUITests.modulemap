@@ -1,6 +1,0 @@
-framework module Pods_Emep_EmepUITests {
-  umbrella header "Pods-Emep-EmepUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
