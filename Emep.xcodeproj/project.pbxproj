@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B76845BE741841FF79124F1 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D91C1436A46F2E38E130D /* Pods_EmepTests.framework */; };
 		21F6B74124784EA400F505FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21F6B74024784EA400F505FC /* GoogleService-Info.plist */; };
+		335A01F924895021009FC2B4 /* PrimaryInfoSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A01F824895021009FC2B4 /* PrimaryInfoSignUpViewController.swift */; };
+		335A01FD24895064009FC2B4 /* ContactInfoSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A01FC24895064009FC2B4 /* ContactInfoSignUpViewController.swift */; };
 		335B67E12477FDE300CE67A5 /* MyRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E02477FDE300CE67A5 /* MyRecords.storyboard */; };
 		335B67E32477FDFD00CE67A5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E22477FDFD00CE67A5 /* Profile.storyboard */; };
 		335B67E52477FE1000CE67A5 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E42477FE1000CE67A5 /* Calendar.storyboard */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		0C2B5D81D4ED1AA4F65A827C /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
 		21F6B74024784EA400F505FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		335A01F824895021009FC2B4 /* PrimaryInfoSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryInfoSignUpViewController.swift; sourceTree = "<group>"; };
+		335A01FC24895064009FC2B4 /* ContactInfoSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoSignUpViewController.swift; sourceTree = "<group>"; };
 		335B67E02477FDE300CE67A5 /* MyRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRecords.storyboard; sourceTree = "<group>"; };
 		335B67E22477FDFD00CE67A5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		335B67E42477FE1000CE67A5 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		335A01F724894FAF009FC2B4 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				335A01F824895021009FC2B4 /* PrimaryInfoSignUpViewController.swift */,
+				335A01FC24895064009FC2B4 /* ContactInfoSignUpViewController.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		335A01FA24895031009FC2B4 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
 		33F2A8152475A45200B86D7F = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +239,8 @@
 		33F2A8B22476F5DB00B86D7F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				335A01FA24895031009FC2B4 /* Sign In */,
+				335A01F724894FAF009FC2B4 /* Sign Up */,
 				F04F0C7D247ED285006B3E3A /* Calendar */,
 				33F2A8272475A45200B86D7F /* Main.storyboard */,
 				335B67E02477FDE300CE67A5 /* MyRecords.storyboard */,
@@ -595,7 +617,9 @@
 				F0481C1B248547D8005F9C0F /* Dictionary+Ext.swift in Sources */,
 				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
 				F0481C14248528B5005F9C0F /* UIView+Ext.swift in Sources */,
+				335A01FD24895064009FC2B4 /* ContactInfoSignUpViewController.swift in Sources */,
 				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
+				335A01F924895021009FC2B4 /* PrimaryInfoSignUpViewController.swift in Sources */,
 				F04F0C81247EDF8C006B3E3A /* TimelineViewModel.swift in Sources */,
 				33F2A8242475A45200B86D7F /* SceneDelegate.swift in Sources */,
 			);
