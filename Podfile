@@ -12,6 +12,7 @@ target 'Emep' do
   pod 'Firebase/Auth'
   pod 'TimelineTableViewCell'
   pod 'ValidationTextField'
+  pod 'IQKeyboardManager'
 
   target 'EmepTests' do
     inherit! :search_paths
