@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="864" y="229.38530734632684"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Info Sign Up View Controller-->
         <scene sceneID="5Vm-go-5GY">
             <objects>
-                <viewController id="n3x-5O-Wpf" sceneMemberID="viewController">
+                <viewController id="n3x-5O-Wpf" customClass="ContactInfoSignUpViewController" customModule="Emep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJd-GY-7SM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--SIGN UP-->
         <scene sceneID="1Z8-G6-5ME">
             <objects>
-                <viewController id="fAN-z6-npa" sceneMemberID="viewController">
+                <viewController id="fAN-z6-npa" customClass="PrimaryInfoSignUpViewController" customModule="Emep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSd-fZ-v0h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +187,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-3B-Qkw">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-3B-Qkw">
                                 <rect key="frame" x="304" y="581" width="51" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="NEXT">
@@ -211,6 +211,13 @@
                         <viewLayoutGuide key="safeArea" id="fI5-Z7-kSG"/>
                     </view>
                     <navigationItem key="navigationItem" title="SIGN UP" id="bl7-ah-nme"/>
+                    <connections>
+                        <outlet property="dobTextField" destination="UqG-XP-Vv6" id="Myc-kr-NHm"/>
+                        <outlet property="lastNameTextField" destination="rB3-d9-uKu" id="hNy-Oy-9b7"/>
+                        <outlet property="nameTextField" destination="W1I-ET-Bgt" id="fcX-IE-Cta"/>
+                        <outlet property="nextBtn" destination="7nH-3B-Qkw" id="6F3-d7-vN9"/>
+                        <outlet property="policyNumberTextField" destination="9l3-16-t3h" id="sCZ-ZT-goe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8p1-kF-7tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
