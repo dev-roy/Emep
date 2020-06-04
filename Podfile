@@ -11,6 +11,7 @@ target 'Emep' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'TimelineTableViewCell'
+  pod 'ValidationTextField'
 
   target 'EmepTests' do
     inherit! :search_paths

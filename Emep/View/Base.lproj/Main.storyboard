@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQ1-jj-FTM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="URb-dn-yoT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -30,22 +30,191 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKy-RH-s5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="230"/>
+            <point key="canvasLocation" x="864" y="229.38530734632684"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="5Vm-go-5GY">
+            <objects>
+                <viewController id="n3x-5O-Wpf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJd-GY-7SM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="61K-Ld-QHr">
+                                <rect key="frame" x="20" y="146" width="335" height="314"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-Wy-Rpa" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="EMAIL"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OvR-ib-dQb" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="81" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="PASSWORD"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S68-zQ-fzs" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="162" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="CONFIRM PASSWORD"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="S50-tW-nqz" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="243" width="335" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="PHONE NUMBER (OPTIONAL)"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-df-iiu">
+                                <rect key="frame" x="20" y="514" width="335" height="47"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="By tapping Sign Up &amp; Accept, you acknowledge that you have read the ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Privacy Policy">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" and agree to the ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Terms of Service.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-Fh-f9v">
+                                <rect key="frame" x="99.5" y="581" width="176" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="SIGN UP &amp; ACCEPT">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="61K-Ld-QHr" firstAttribute="leading" secondItem="RJd-GY-7SM" secondAttribute="leading" constant="20" id="4EC-ib-lmG"/>
+                            <constraint firstItem="iEf-df-iiu" firstAttribute="leading" secondItem="RJd-GY-7SM" secondAttribute="leading" constant="20" id="50E-Zh-TVw"/>
+                            <constraint firstItem="t2R-Fh-f9v" firstAttribute="top" secondItem="iEf-df-iiu" secondAttribute="bottom" constant="20" id="Cz2-j3-QJL"/>
+                            <constraint firstItem="61K-Ld-QHr" firstAttribute="top" secondItem="yn8-Yr-v8P" secondAttribute="top" constant="50" id="DpO-5b-hY4"/>
+                            <constraint firstItem="yn8-Yr-v8P" firstAttribute="bottom" secondItem="t2R-Fh-f9v" secondAttribute="bottom" constant="50" id="Hri-hy-2KE"/>
+                            <constraint firstAttribute="trailing" secondItem="61K-Ld-QHr" secondAttribute="trailing" constant="20" id="bpm-PH-mTO"/>
+                            <constraint firstItem="t2R-Fh-f9v" firstAttribute="centerX" secondItem="RJd-GY-7SM" secondAttribute="centerX" id="k8K-ey-RXn"/>
+                            <constraint firstAttribute="trailing" secondItem="iEf-df-iiu" secondAttribute="trailing" constant="20" id="ueq-hj-T2B"/>
+                            <constraint firstItem="61K-Ld-QHr" firstAttribute="height" secondItem="RJd-GY-7SM" secondAttribute="height" multiplier="0.470765" id="y0T-4y-RFe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yn8-Yr-v8P"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6gM-Op-DoR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aS7-9o-dN8"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wb-x5-5hE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-695.20000000000005" y="541.97901049475263"/>
+        </scene>
+        <!--SIGN UP-->
         <scene sceneID="1Z8-G6-5ME">
             <objects>
                 <viewController id="fAN-z6-npa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qSd-fZ-v0h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZxL-YR-8Il">
+                                <rect key="frame" x="20" y="146" width="335" height="314"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1I-ET-Bgt" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="NAME"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-d9-uKu" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="81" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="LAST NAME"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqG-XP-Vv6" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="162" width="335" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="DOB"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9l3-16-t3h" customClass="ValidationTextField" customModule="ValidationTextField">
+                                        <rect key="frame" x="0.0" y="243" width="335" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="POLICY NUMBER (OPTIONAL)"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-3B-Qkw">
+                                <rect key="frame" x="304" y="581" width="51" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n3x-5O-Wpf" kind="show" id="DFF-PQ-uGB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7nH-3B-Qkw" secondAttribute="trailing" constant="20" id="E4s-m3-s9N"/>
+                            <constraint firstItem="ZxL-YR-8Il" firstAttribute="top" secondItem="fI5-Z7-kSG" secondAttribute="top" constant="50" id="IQC-uf-bKi"/>
+                            <constraint firstItem="ZxL-YR-8Il" firstAttribute="height" secondItem="qSd-fZ-v0h" secondAttribute="height" multiplier="0.470765" id="K2H-62-BXD"/>
+                            <constraint firstItem="fI5-Z7-kSG" firstAttribute="bottom" secondItem="7nH-3B-Qkw" secondAttribute="bottom" constant="50" id="ZwW-w4-ds5"/>
+                            <constraint firstItem="ZxL-YR-8Il" firstAttribute="leading" secondItem="fI5-Z7-kSG" secondAttribute="leading" constant="20" id="a9h-dm-A1K"/>
+                            <constraint firstItem="fI5-Z7-kSG" firstAttribute="trailing" secondItem="ZxL-YR-8Il" secondAttribute="trailing" constant="20" id="x8U-l1-NVK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fI5-Z7-kSG"/>
                     </view>
+                    <navigationItem key="navigationItem" title="SIGN UP" id="bl7-ah-nme"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8p1-kF-7tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-694" y="542"/>
+            <point key="canvasLocation" x="-1554.4000000000001" y="541.97901049475263"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Mh1-Px-c7N">
@@ -55,7 +224,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipa-mg-YHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="230"/>
+            <point key="canvasLocation" x="1328" y="229.38530734632684"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="4WA-ML-OS5">
@@ -65,7 +234,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsf-3x-WN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="234"/>
+            <point key="canvasLocation" x="1672.8" y="233.88305847076464"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Vs3-Ox-WWf">
@@ -75,7 +244,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPn-T2-uDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="234"/>
+            <point key="canvasLocation" x="2032.8" y="233.88305847076464"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="arM-FW-jTy">
@@ -96,6 +265,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P58-PJ-ueD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="572" y="-196"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yye-ff-Gy2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="URb-dn-yoT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Asu-mG-xcP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fAN-z6-npa" kind="relationship" relationship="rootViewController" id="t2r-QZ-YJI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zu7-TB-iPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2482" y="542"/>
         </scene>
     </scenes>
 </document>
