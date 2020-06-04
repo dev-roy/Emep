@@ -28,6 +28,7 @@ class PrimaryInfoSignUpViewController: UIViewController {
     private func addTargets() {
         nameTextField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
         lastNameTextField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
+        dobTextField.addInputViewDatePicker(target: self, selector: #selector(doneButtonPressed))
         dobTextField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
         policyNumberTextField.addTarget(self, action: #selector(formValidation), for: .editingChanged)
     }
@@ -51,5 +52,13 @@ class PrimaryInfoSignUpViewController: UIViewController {
         }
         nextBtn.isEnabled = true
         nextBtn.alpha = 1.0
+    }
+    
+    @objc private func doneButtonPressed() {
+        if let datePicker = dobTextField.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dobTextField.text = dateFormatter.string(from: datePicker.date)
+        }
     }
 }
