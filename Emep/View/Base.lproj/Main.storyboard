@@ -36,7 +36,7 @@
         <scene sceneID="5Vm-go-5GY">
             <objects>
                 <viewController id="n3x-5O-Wpf" customClass="ContactInfoSignUpViewController" customModule="Emep" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RJd-GY-7SM">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="RJd-GY-7SM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -78,8 +78,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-df-iiu">
-                                <rect key="frame" x="20" y="705.66666666666663" width="374" height="50.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-df-iiu">
+                                <rect key="frame" x="20" y="705.66666666666652" width="374" height="50.333333333333371"/>
                                 <attributedString key="attributedText">
                                     <fragment content="By tapping Sign Up &amp; Accept, you acknowledge that you have read the ">
                                         <attributes>
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-Fh-f9v">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-Fh-f9v">
                                 <rect key="frame" x="119" y="776" width="176" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SIGN UP &amp; ACCEPT">

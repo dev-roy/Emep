@@ -36,6 +36,7 @@ class PrimaryInfoSignUpViewController: UIViewController {
     private func setUpValidationTextFields() {
         nameTextField.validCondition = {$0.count > 1 }
         lastNameTextField.validCondition = {$0.count > 1 && $0.contains(" ")}
+        // TODO: - Find a way to validate DOB
         dobTextField.validCondition = {$0.count > 3}
         policyNumberTextField.validCondition = {$0.count > 7}
     }
@@ -44,8 +45,7 @@ class PrimaryInfoSignUpViewController: UIViewController {
     @objc func formValidation() {
         guard
             nameTextField.isValid,
-            lastNameTextField.isValid,
-            dobTextField.isValid else {
+            lastNameTextField.isValid else {
                 nextBtn.isEnabled = false
                 nextBtn.alpha = 0.5
                 return
@@ -60,5 +60,6 @@ class PrimaryInfoSignUpViewController: UIViewController {
             dateFormatter.dateStyle = .medium
             dobTextField.text = dateFormatter.string(from: datePicker.date)
         }
+        dobTextField.resignFirstResponder()
     }
 }

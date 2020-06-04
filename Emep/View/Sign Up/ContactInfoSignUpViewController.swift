@@ -31,7 +31,7 @@ class ContactInfoSignUpViewController: UIViewController {
     }
     
     private func setUpValidationTextFields() {
-        emailTextField.validCondition = {$0.contains("@")}
+        emailTextField.validCondition = {return Validator.isEmailValid($0) }
         passwordTextField.validCondition = {$0.count > 7}
         confirmPasswordTextField.validCondition = { return $0 == self.passwordTextField.text }
         phoneNumberTextField.validCondition = {$0.count > 7}
