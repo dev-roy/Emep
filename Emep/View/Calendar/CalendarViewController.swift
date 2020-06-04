@@ -6,28 +6,43 @@
 //  Copyright © 2020 Rodrigo Buendia Ramos. All rights reserved.
 //
 
+import JTAppleCalendar
 import TimelineTableViewCell
 import UIKit
 
-class CalendarViewController: UITableViewController {
+class CalendarViewController: UIViewController {
 
-    private let timelineViewModel = TimelineViewModel()
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    // private let timelineViewModel = TimelineViewModel()
+    private let viewModel = CalendarViewModel()
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var calendarView: JTACMonthView!
+    @IBOutlet weak var calendarContainerView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpTable()
         setUpDataBinding()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        setUpCalendar()
     }
     
     private func setUpDataBinding() {
-        
+        viewModel.presentTimelineHandler = displayTimeline
+        viewModel.presentCalendarHandler = displayCalendar
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    private func displayTimeline() {
+        tableView.isHidden = false
+        calendarContainerView.isHidden = true
+    }
+    
+    private func displayCalendar() {
+        tableView.isHidden = true
+        calendarContainerView.isHidden = false
+    }
+    
+    private func setUpTable() {
         let bundle = Bundle(for: TimelineTableViewCell.self)
         let nibUrl = bundle.url(forResource: "TimelineTableViewCell", withExtension: "bundle")
         let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell",
@@ -35,39 +50,53 @@ class CalendarViewController: UITableViewController {
         tableView.register(timelineTableViewCellNib, forCellReuseIdentifier: "TimelineTableViewCell")
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedSectionHeaderHeight = 36
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return timelineViewModel.getNumberOfYears()
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timelineViewModel.getNumberOfAppointments(forSection: section)
-    }
-
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.separatorInset = .zero
+        tableView.estimatedSectionHeaderHeight = 10
+        tableView.contentInsetAdjustmentBehavior = .never
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    private func setUpCalendar() {
+        calendarView.calendarDataSource = self
+        calendarView.calendarDelegate = self
+    }
+
+    @IBAction func onSegmentedControlChanged(_ sender: Any) {
+        viewModel.onSegmentedControlChanged(input: segmentedControl.selectedSegmentIndex)
+    }
+}
+
+extension CalendarViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.separatorInset = .zero
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         let label = UILabel()
-        label.text = timelineViewModel.getHeaderStringForSection(section)
+        label.text = viewModel.timelineViewModel.getHeaderStringForSection(section)
         label.font = UIFont.systemFont(ofSize: 32)
         label.textAlignment = .center
         label.addToAndFill(parent: view)
         return view
     }
+}
+
+extension CalendarViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.timelineViewModel.getNumberOfYears()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.timelineViewModel.getNumberOfAppointments(forSection: section)
+    }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as? TimelineTableViewCell else {
             return UITableViewCell()
         }
 
-        let cellViewModel = timelineViewModel.getAppointment(forIndexPath: indexPath)
+        let cellViewModel = viewModel.timelineViewModel.getAppointment(forIndexPath: indexPath)
         cell.timelinePoint = TimelinePoint(diameter: 16.0, lineWidth: 4.0, color: UIColor(red: 0, green: 173, blue: 184, alpha: 1), filled: true)
         cell.timeline = Timeline(width: 4.0, frontColor: .gray, backColor: .gray)
         cell.timeline.frontColor = cellViewModel.isTop ? .clear : .systemGray3
@@ -93,6 +122,30 @@ class CalendarViewController: UITableViewController {
             cell.imageView?.constrainToVerticalCenterAndLeading(leadingInset: 12)
             cell.imageView?.constraintToSize(width: 40, height: 40)
         }
+        return cell
+    }
+}
+
+extension CalendarViewController: JTACMonthViewDataSource {
+    func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy MM dd"
+        let startDate = formatter.date(from: "2018 01 01")!
+        let endDate = Date()
+        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+    }
+}
+
+extension CalendarViewController: JTACMonthViewDelegate {
+    func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+        guard let cell = cell as? DateCell else { return }
+        cell.dateLabel.text = cellState.text
+    }
+    
+    func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
+        guard let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: DateCell.reuseIdentifier, for: indexPath) as? DateCell
+            else { return JTACDayCell() }
+        cell.dateLabel.text = cellState.text
         return cell
     }
 }
