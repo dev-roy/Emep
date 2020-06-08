@@ -59,6 +59,7 @@ class CalendarViewController: UIViewController {
     private func setUpCalendar() {
         calendarView.calendarDataSource = self
         calendarView.calendarDelegate = self
+        calendarView.scrollingMode = .stopAtEachCalendarFrame
     }
 
     @IBAction func onSegmentedControlChanged(_ sender: Any) {
@@ -139,13 +140,25 @@ extension CalendarViewController: JTACMonthViewDataSource {
 extension CalendarViewController: JTACMonthViewDelegate {
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         guard let cell = cell as? DateCell else { return }
-        cell.dateLabel.text = cellState.text
+        cell.setUpFor(cellState: cellState)
     }
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         guard let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: DateCell.reuseIdentifier, for: indexPath) as? DateCell
             else { return JTACDayCell() }
-        cell.dateLabel.text = cellState.text
+        self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)
         return cell
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        let visibleDates = calendarView.visibleDates()
+        calendarView.viewWillTransition(to: .zero, with: coordinator, anchorDate: visibleDates.monthDates.first?.date)
+    }
+    
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+        guard let cell = cell as? DateCell else { return }
+        cell.selectCell()
+        // cell?.backgroundColor = .red
+        print("Date selected", date)
     }
 }
