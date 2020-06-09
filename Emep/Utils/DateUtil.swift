@@ -8,7 +8,9 @@
 
 import Foundation
 
-final class DateUtil: NSObject {
+final class DateUtil {
+    private init() {}
+    
     private static let mediumDateNoTimeFormatter: DateFormatter = {
         let formater = DateFormatter()
         formater.dateStyle = .medium
@@ -16,18 +18,22 @@ final class DateUtil: NSObject {
         return formater
     }()
     
-    static func epocToDate(_ epocTime: Int) -> Date {
+    static func getDateFrom(epocTime: Int) -> Date {
         return Date(timeIntervalSince1970: TimeInterval(epocTime))
     }
     
-    static func epocToTimeString(_ epocTime: Int) -> String {
-        let date = epocToDate(epocTime)
-        return mediumDateNoTimeFormatter.string(from: date)
+    static func getTimeStringFrom(epocTime: Int) -> String {
+        let date = getDateFrom(epocTime: epocTime)
+        return getTimeStringFrom(date: date)
     }
     
-    static func getYearFromEpoc(_ epocTime: Int) -> Int {
-        let date = epocToDate(epocTime)
+    static func getYearFrom(epocTime: Int) -> Int {
+        let date = getDateFrom(epocTime: epocTime)
         let calendar = Calendar.current
         return calendar.component(.year, from: date)
+    }
+    
+    static func getTimeStringFrom(date: Date) -> String {
+        return mediumDateNoTimeFormatter.string(from: date)
     }
 }
