@@ -20,6 +20,12 @@ class CalendarViewModel {
     }
 
     private var selectedDate: Date?
+    private var calendarMonths: [Date]?
+    
+    init() {
+        let (start, end) = timelineViewModel.getAppointmentsTimeframe()
+        calendarMonths = DateUtil.getMonthsInBetween(startDate: start, endDate: end)
+    }
     
     func onSegmentedControlChanged(input: Int) {
         guard
@@ -46,5 +52,11 @@ class CalendarViewModel {
     func isDateSelected(_ date: Date) -> Bool {
         guard let selectedDate = selectedDate else { return false }
         return selectedDate == date
+    }
+    
+    func getHeaderTitleFor(indexPath: IndexPath) -> String {
+        guard let calendarMonths = calendarMonths else { return "" }
+        // let year = timelineViewModel.getHeaderStringForSection(indexPath.section)
+        return DateUtil.getMonthAndYearStringFrom(date: calendarMonths[indexPath.section])
     }
 }

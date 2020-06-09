@@ -161,4 +161,14 @@ extension CalendarViewController: JTACMonthViewDelegate {
         viewModel.setSelectedDate(cellState.date)
         cell.set(selected: true)
     }
+    
+    func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
+        guard let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: DateHeader.reuseIdentifier, for: indexPath) as? DateHeader else { fatalError() }
+        header.headerLabel.text = viewModel.getHeaderTitleFor(indexPath: indexPath)
+        return header
+    }
+    
+    func calendarSizeForMonths(_ calendar: JTACMonthView?) -> MonthSize? {
+        return MonthSize(defaultSize: 50)
+    }
 }

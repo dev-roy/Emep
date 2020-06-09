@@ -39,13 +39,13 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="j5g-pj-PJD">
                                             <size key="itemSize" width="84" height="84"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="50" height="50"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="D2e-MH-cqj" customClass="DateCell" customModule="Emep" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                <rect key="frame" x="0.0" y="50" width="84" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
@@ -53,6 +53,28 @@
                                                 </view>
                                             </collectionViewCell>
                                         </cells>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="xxl-2Q-gn0" customClass="DateHeader" customModule="Emep" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-ts-bWU">
+                                                    <rect key="frame" x="16" y="16" width="366" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GyN-ts-bWU" secondAttribute="bottom" constant="8" id="OoW-1k-d2J"/>
+                                                <constraint firstItem="GyN-ts-bWU" firstAttribute="leading" secondItem="xxl-2Q-gn0" secondAttribute="leadingMargin" constant="8" id="PAc-7f-nba"/>
+                                                <constraint firstItem="GyN-ts-bWU" firstAttribute="top" secondItem="xxl-2Q-gn0" secondAttribute="topMargin" constant="8" id="WR8-QO-YIZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GyN-ts-bWU" secondAttribute="trailing" constant="8" id="hqn-pq-XBu"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="headerLabel" destination="GyN-ts-bWU" id="WaJ-3i-M1H"/>
+                                            </connections>
+                                        </collectionReusableView>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LL9-TY-eq5">
                                         <rect key="frame" x="8" y="499.5" width="398" height="217.5"/>
