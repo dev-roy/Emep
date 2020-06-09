@@ -12,7 +12,6 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
-    // private let timelineViewModel = TimelineViewModel()
     private let viewModel = CalendarViewModel()
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -30,6 +29,7 @@ class CalendarViewController: UIViewController {
     private func setUpDataBinding() {
         viewModel.presentTimelineHandler = displayTimeline
         viewModel.presentCalendarHandler = displayCalendar
+        viewModel.reloadCalendarDatesHandler = calendarView.reloadDates
     }
     
     private func displayTimeline() {
@@ -129,10 +129,9 @@ extension CalendarViewController: UITableViewDataSource {
 
 extension CalendarViewController: JTACMonthViewDataSource {
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy MM dd"
-        let startDate = formatter.date(from: "2018 01 01")!
-        let endDate = Date()
+        let timeFrame = viewModel.timelineViewModel.getAppointmentsTimeframe()
+        let startDate = timeFrame.startDate
+        let endDate = timeFrame.endDate
         return ConfigurationParameters(startDate: startDate, endDate: endDate)
     }
 }
@@ -141,6 +140,8 @@ extension CalendarViewController: JTACMonthViewDelegate {
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         guard let cell = cell as? DateCell else { return }
         cell.setUpFor(cellState: cellState)
+        cell.set(hasAppointments: viewModel.timelineViewModel.doesDateCellHasAppointments(date: cell))
+        cell.set(selected: viewModel.isDateSelected(cellState.date))
     }
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
@@ -157,8 +158,7 @@ extension CalendarViewController: JTACMonthViewDelegate {
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         guard let cell = cell as? DateCell else { return }
-        cell.selectCell()
-        // cell?.backgroundColor = .red
-        print("Date selected", date)
+        viewModel.setSelectedDate(cellState.date)
+        cell.set(selected: true)
     }
 }
