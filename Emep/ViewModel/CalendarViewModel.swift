@@ -6,17 +6,20 @@
 //  Copyright © 2020 Rodrigo Buendia Ramos. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class CalendarViewModel {
     let timelineViewModel = TimelineViewModel()
     
     var presentTimelineHandler: (() -> Void)?
     var presentCalendarHandler: (() -> Void)?
+    var reloadCalendarDatesHandler: (([Date]) -> Void)?
     
     enum Modules: Int {
         case timeline, calendar, undefined
     }
+
+    private var selectedDate: Date?
     
     func onSegmentedControlChanged(input: Int) {
         guard
@@ -27,7 +30,21 @@ class CalendarViewModel {
         switch selectedModule {
         case .timeline: presentTimeline()
         case .calendar: presentCalendar()
-        case .undefined: print("Undefined case")
+        case .undefined: fatalError("Unimplemented segmented control case for calendar")
         }
+    }
+    
+    func setSelectedDate(_ date: Date) {
+        let previousDate = selectedDate
+        selectedDate = date
+        if let handler = reloadCalendarDatesHandler,
+            let previousDate = previousDate {
+            handler([previousDate])
+        }
+    }
+    
+    func isDateSelected(_ date: Date) -> Bool {
+        guard let selectedDate = selectedDate else { return false }
+        return selectedDate == date
     }
 }
