@@ -11,15 +11,15 @@ import Foundation
 class TimelineCellViewModel {
     private let appointment: Appointment
     let year: Int
-    private let dateFormatted: String
+    let dateFormatted: String
 
     var isTop = false
     var isBottom = false
 
     init(model: Appointment) {
         self.appointment = model
-        year = DateUtil.getYearFromEpoc(appointment.date)
-        dateFormatted = DateUtil.epocToTimeString(appointment.date)
+        year = DateUtil.getYearFrom(epocTime: appointment.date)
+        dateFormatted = DateUtil.getTimeStringFrom(epocTime: appointment.date)
     }
     
     func setCellLocation(cellIndex: Int, numberOfAppointments: Int) {
@@ -32,10 +32,6 @@ class TimelineCellViewModel {
     }
     
     func getAppointmentType() -> AppointmentType { appointment.type }
-}
-
-extension Array where Element == TimelineCellViewModel {
-    func groupByYear() -> [Int: [Element]] {
-        Dictionary(grouping: self, by: { (viewModel: Element) in viewModel.year })
-    }
+    
+    func getDate() -> Date { DateUtil.getDateFrom(epocTime: appointment.date) }
 }
