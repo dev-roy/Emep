@@ -15,23 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8cU-jT-Ig7">
-                                <rect key="frame" x="0.0" y="88" width="414" height="769"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" id="dBS-cm-W4C">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dBS-cm-W4C" id="eee-fo-J16">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <sections/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD2-Jt-4JK">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD2-Jt-4JK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5mk-Pa-kWd" customClass="JTACMonthView" customModule="JTAppleCalendar">
@@ -57,8 +41,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-ts-bWU">
-                                                    <rect key="frame" x="16" y="16" width="366" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="May" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyN-ts-bWU">
+                                                    <rect key="frame" x="16" y="8" width="366" height="34"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -66,9 +50,9 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GyN-ts-bWU" secondAttribute="bottom" constant="8" id="OoW-1k-d2J"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GyN-ts-bWU" secondAttribute="bottom" id="OoW-1k-d2J"/>
                                                 <constraint firstItem="GyN-ts-bWU" firstAttribute="leading" secondItem="xxl-2Q-gn0" secondAttribute="leadingMargin" constant="8" id="PAc-7f-nba"/>
-                                                <constraint firstItem="GyN-ts-bWU" firstAttribute="top" secondItem="xxl-2Q-gn0" secondAttribute="topMargin" constant="8" id="WR8-QO-YIZ"/>
+                                                <constraint firstItem="GyN-ts-bWU" firstAttribute="top" secondItem="xxl-2Q-gn0" secondAttribute="topMargin" id="WR8-QO-YIZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GyN-ts-bWU" secondAttribute="trailing" constant="8" id="hqn-pq-XBu"/>
                                             </constraints>
                                             <connections>
@@ -144,20 +128,33 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1gE-VE-0fx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" id="222-bo-CJo">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="222-bo-CJo" id="LOP-DM-RsM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1gE-VE-0fx" firstAttribute="top" secondItem="44h-fp-eX1" secondAttribute="top" id="0Ay-02-UWz"/>
                             <constraint firstItem="oD2-Jt-4JK" firstAttribute="bottom" secondItem="44h-fp-eX1" secondAttribute="bottom" id="GXH-TF-nMb"/>
+                            <constraint firstItem="44h-fp-eX1" firstAttribute="bottom" secondItem="1gE-VE-0fx" secondAttribute="bottom" id="fid-SV-FyM"/>
                             <constraint firstItem="oD2-Jt-4JK" firstAttribute="top" secondItem="44h-fp-eX1" secondAttribute="top" id="gnJ-8Z-EIU"/>
                             <constraint firstItem="oD2-Jt-4JK" firstAttribute="leading" secondItem="44h-fp-eX1" secondAttribute="leading" id="hZB-hJ-16s"/>
+                            <constraint firstItem="1gE-VE-0fx" firstAttribute="leading" secondItem="44h-fp-eX1" secondAttribute="leading" id="mBh-82-hbJ"/>
+                            <constraint firstItem="44h-fp-eX1" firstAttribute="trailing" secondItem="1gE-VE-0fx" secondAttribute="trailing" id="n3Q-hW-q12"/>
                             <constraint firstItem="44h-fp-eX1" firstAttribute="trailing" secondItem="oD2-Jt-4JK" secondAttribute="trailing" id="xpp-fq-AYm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="44h-fp-eX1"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="8cU-jT-Ig7"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dXN-dN-PfO">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="XQs-di-P9b">
@@ -178,7 +175,7 @@
                         <outlet property="calendarContainerView" destination="oD2-Jt-4JK" id="Quv-29-r0Y"/>
                         <outlet property="calendarView" destination="5mk-Pa-kWd" id="4pT-Iy-eiQ"/>
                         <outlet property="segmentedControl" destination="2cC-M2-cOT" id="uXH-Ei-i9n"/>
-                        <outlet property="tableView" destination="8cU-jT-Ig7" id="j5r-9I-Hu5"/>
+                        <outlet property="tableView" destination="1gE-VE-0fx" id="Yop-Wh-kRM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjE-R8-5tD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
