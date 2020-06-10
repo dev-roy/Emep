@@ -71,4 +71,11 @@ class DateUtilTest: XCTestCase {
         let result = DateUtil.getMonthsInBetween(startDate: startDate, endDate: endDate)
         XCTAssertEqual(result.count, 0, "There should have been no entries")
     }
+
+    func test_getMonthsInBetween_differentYear() {
+        let startDate = Date(timeIntervalSince1970: 1560175145) // Jun 10 2019
+        let endDate = Date(timeIntervalSince1970: 1591029630) // Jun 1 2020
+        let result = DateUtil.getMonthsInBetween(startDate: startDate, endDate: endDate)
+        XCTAssertEqual(result.count, 13, "There were no 13 months in the result")
+    }
 }

@@ -45,8 +45,9 @@ final class DateUtil {
 
     static func getMonthsInBetween(startDate: Date, endDate: Date) -> [Date] {
         var dates: [Date] = []
-        var date = startDate
-        while date <= endDate {
+        var date = startDate.startOfMonth()
+        let end = endDate.endOfMonth()
+        while date <= end {
             dates.append(date)
             guard let newDate = Calendar.current.date(byAdding: .month, value: 1, to: date) else { break }
             date = newDate
