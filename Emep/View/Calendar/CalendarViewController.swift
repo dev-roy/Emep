@@ -51,7 +51,6 @@ class CalendarViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 10
-        tableView.contentInsetAdjustmentBehavior = .never
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -163,7 +162,8 @@ extension CalendarViewController: JTACMonthViewDelegate {
     }
     
     func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
-        guard let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: DateHeader.reuseIdentifier, for: indexPath) as? DateHeader else { fatalError() }
+        guard let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: DateHeader.reuseIdentifier, for: indexPath) as? DateHeader
+            else { fatalError() }
         header.headerLabel.text = viewModel.getHeaderTitleFor(indexPath: indexPath)
         return header
     }

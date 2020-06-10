@@ -22,7 +22,7 @@ extension CalendarResponse {
             latestAppointmentDate: 1590518639,
             earliestAppointmentDate: 1430505839,
             appointments: [
-                Appointment(date: 1591634430, title: "Broke my finger", description: "Playing basketball. Didn't had any infection", type: .fracture, isEditable: true),
+                Appointment(date: 1560175145, title: "Broke my finger", description: "Playing basketball. Didn't had any infection", type: .fracture, isEditable: true),
                 Appointment(date: 1591029630, title: "Weekly Checkup", description: "Weekly checkup at the doctor. Everything went well", type: .checkup, isEditable: true),
                 Appointment(date: 1591202430, title: "Vaccine", description: "For tetanus", type: .vaccine, isEditable: true),
                 Appointment(date: 1589388030, title: "Nose operation", description: "It was too big", type: .operation, isEditable: true),
