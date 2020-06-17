@@ -79,7 +79,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-df-iiu">
-                                <rect key="frame" x="20" y="-190.33333333333337" width="335" height="50.333333333333343"/>
+                                <rect key="frame" x="20" y="705.66666666666663" width="374" height="50.333333333333371"/>
                                 <attributedString key="attributedText">
                                     <fragment content="By tapping Sign Up &amp; Accept, you acknowledge that you have read the ">
                                         <attributes>
@@ -112,7 +112,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2R-Fh-f9v">
-                                <rect key="frame" x="99.666666666666686" y="-120" width="176" height="36"/>
+                                <rect key="frame" x="119" y="776" width="176" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SIGN UP &amp; ACCEPT">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -283,7 +283,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Yye-ff-Gy2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="URb-dn-yoT" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="URb-dn-yoT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Asu-mG-xcP">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
