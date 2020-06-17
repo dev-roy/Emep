@@ -345,6 +345,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.4.0)
+  - IQKeyboardManager (6.5.5)
   - JTAppleCalendar (8.0.3)
   - leveldb-library (1.22)
   - nanopb (1.30905.0):
@@ -352,7 +353,7 @@ PODS:
     - nanopb/encode (= 1.30905.0)
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
-  - PromisesObjC (1.2.9)
+  - PromisesObjC (1.2.8)
   - SwiftLint (0.39.2)
   - TimelineTableViewCell (2.2.1)
   - ValidationTextField (1.0.4)
@@ -363,6 +364,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
+  - IQKeyboardManager
   - JTAppleCalendar (~> 8.0)
   - SwiftLint
   - TimelineTableViewCell
@@ -390,6 +392,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - IQKeyboardManager
     - JTAppleCalendar
     - leveldb-library
     - nanopb
@@ -419,14 +422,15 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
-  PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   TimelineTableViewCell: b2721a3c1f17c4a4950ae442f45cd4e8669a2750
   ValidationTextField: 91bc04170ba4b4358912c372e12d7af4c9143ad5
 
-PODFILE CHECKSUM: b9fb0dc8233128c6fc35ef5a02ee11c8358224ef
+PODFILE CHECKSUM: 697b9c93c21f3db1ddf0e5bd75aa325a903af6f4
 
 COCOAPODS: 1.8.3
