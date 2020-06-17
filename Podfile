@@ -13,6 +13,8 @@ target 'Emep' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'TimelineTableViewCell'
+  pod 'ValidationTextField'
+  pod 'IQKeyboardManager'
   pod 'JTAppleCalendar', '~> 8.0'
 
   target 'EmepTests' do
