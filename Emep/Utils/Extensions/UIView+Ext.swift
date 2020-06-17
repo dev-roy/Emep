@@ -32,4 +32,11 @@ extension UIView {
         self.topAnchor.constraint(equalTo: parent.topAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: parent.bottomAnchor).isActive = true
     }
+    
+    func addToAndCenter(parent: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        parent.addSubview(self)
+        self.centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
+        self.centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
+    }
 }

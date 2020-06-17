@@ -10,9 +10,12 @@ target 'Emep' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'TimelineTableViewCell'
   pod 'ValidationTextField'
   pod 'IQKeyboardManager'
+  pod 'JTAppleCalendar', '~> 8.0'
 
   target 'EmepTests' do
     inherit! :search_paths
