@@ -25,5 +25,5 @@ struct Appointment: Codable {
     let title, description: String
     let type: AppointmentType
     let isEditable: Bool
-    var year: Int { DateUtil.getYearFromEpoc(date) }
+    var year: Int { DateUtil.getYearFrom(epocTime: date) }
 }

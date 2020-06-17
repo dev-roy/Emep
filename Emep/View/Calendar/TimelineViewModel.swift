@@ -14,17 +14,20 @@ class TimelineViewModel {
 
     private let calendarResponse = CalendarResponse.loadDummyData()
 
-    private let groupedAppointments: [Int: [TimelineCellViewModel]]!
-    private let years: [Int]!
+    private let groupedYearAppointments: [Int: [TimelineCellViewModel]]
+    private let groupedDayAppointments: [String: [TimelineCellViewModel]]
+    private let years: [Int]
 
     init() {
-        let timelineViewModels = calendarResponse.appointments.map { TimelineCellViewModel(model: $0) }
-        groupedAppointments = timelineViewModels.groupByYear()
-        years = groupedAppointments.getSortedKeys()
+        let appointments = calendarResponse.appointments
+        let timelineViewModels = appointments.toCellViewModels()
+        groupedYearAppointments = timelineViewModels.groupByYear()
+        years = groupedYearAppointments.getSortedKeys()
+        groupedDayAppointments = timelineViewModels.groupByDayDate()
     }
 
     func getNumberOfYears() -> Int {
-        return groupedAppointments.count
+        return groupedYearAppointments.count
     }
     
     func getHeaderStringForSection(_ section: Int) -> String {
@@ -33,16 +36,31 @@ class TimelineViewModel {
 
     func getNumberOfAppointments(forSection section: Int) -> Int {
         let year = years[section]
-        return groupedAppointments[year]?.count ?? 0
+        return groupedYearAppointments[year]?.count ?? 0
     }
 
     func getAppointment(forIndexPath indexPath: IndexPath) -> TimelineCellViewModel {
         let year = years[indexPath.section]
-        guard let appointments = groupedAppointments[year] else {
+        guard let appointments = groupedYearAppointments[year] else {
             fatalError("No appointments array for year")
         }
         let cellViewModel = appointments[indexPath.row]
         cellViewModel.setCellLocation(cellIndex: indexPath.row, numberOfAppointments: appointments.count)
         return cellViewModel
+    }
+    
+    func getAppointmentsTimeframe() -> (startDate: Date, endDate: Date) {
+        guard
+            let firstYear = years.last,
+            let lastYear = years.first,
+            let firstAppointment = groupedYearAppointments[firstYear]?.last,
+            let lastAppointment = groupedYearAppointments[lastYear]?.first
+            else { fatalError("No appointments array for year") }
+        return (startDate: firstAppointment.getDate(), endDate: lastAppointment.getDate())
+    }
+    
+    func doesDateCellHasAppointments(date: DateCell) -> Bool {
+        guard let dateAppointments = groupedDayAppointments[date.dayDate] else { return false }
+        return !dateAppointments.isEmpty
     }
 }

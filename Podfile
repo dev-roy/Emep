@@ -13,6 +13,7 @@ target 'Emep' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'TimelineTableViewCell'
+  pod 'JTAppleCalendar', '~> 8.0'
 
   target 'EmepTests' do
     inherit! :search_paths
