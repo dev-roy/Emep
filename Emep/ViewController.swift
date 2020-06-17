@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        UserNetworkManager.shared.signOut()
     }
+    
+//    createUser(email: "test1@test.com", password: "Welcome@100", name: "tester1", username: "testerusername1")
 }

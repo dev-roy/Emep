@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14EBEBA5A37373D88930EC87 /* Pods_Emep_EmepUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C337DD347D0215B07E2077 /* Pods_Emep_EmepUITests.framework */; };
+		2133A186248693F500C384A4 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133A185248693F500C384A4 /* AuthenticationTests.swift */; };
+		21347A9A2485454600D7279B /* UserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A992485454600D7279B /* UserNetworkManager.swift */; };
+		21347A9C248547AA00D7279B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A9B248547AA00D7279B /* User.swift */; };
+		21347A9E24854C4A00D7279B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21347A9D24854C4A00D7279B /* Constants.swift */; };
 		1B76845BE741841FF79124F1 /* Pods_EmepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D91C1436A46F2E38E130D /* Pods_EmepTests.framework */; };
 		21F6B74124784EA400F505FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21F6B74024784EA400F505FC /* GoogleService-Info.plist */; };
 		335B67E12477FDE300CE67A5 /* MyRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335B67E02477FDE300CE67A5 /* MyRecords.storyboard */; };
@@ -64,6 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045E1444C55A09790909616F /* Pods-Emep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.release.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.release.xcconfig"; sourceTree = "<group>"; };
+		083235203C100DB0A2D24797 /* Pods-EmepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmepTests.release.xcconfig"; path = "Target Support Files/Pods-EmepTests/Pods-EmepTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E73D129A0082EEC923CA517 /* Pods_Emep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2133A185248693F500C384A4 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		21347A992485454600D7279B /* UserNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkManager.swift; sourceTree = "<group>"; };
+		21347A9B248547AA00D7279B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21347A9D24854C4A00D7279B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0C2B5D81D4ED1AA4F65A827C /* Pods-Emep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emep.debug.xcconfig"; path = "Target Support Files/Pods-Emep/Pods-Emep.debug.xcconfig"; sourceTree = "<group>"; };
 		21F6B74024784EA400F505FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		335B67E02477FDE300CE67A5 /* MyRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyRecords.storyboard; sourceTree = "<group>"; };
@@ -144,7 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B0192FF20F480F7B2B7CAF2 /* Frameworks */ = {
+		21347A982485451600D7279B /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				21347A992485454600D7279B /* UserNetworkManager.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		3287585D812DB6D6D65D2216 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				96128D58B478F3E0C2E4551C /* Pods_Emep.framework */,
@@ -179,6 +199,7 @@
 		33F2A8202475A45200B86D7F /* Emep */ = {
 			isa = PBXGroup;
 			children = (
+				21347A982485451600D7279B /* APIs */,
 				F0EBC11C247E932F00BF32B4 /* Utils */,
 				33F2A8B12476F5B100B86D7F /* Model */,
 				33F2A8B22476F5DB00B86D7F /* View */,
@@ -192,6 +213,7 @@
 				33F2A8322475A45A00B86D7F /* Info.plist */,
 				21F6B74024784EA400F505FC /* GoogleService-Info.plist */,
 				33F2A82A2475A45200B86D7F /* Emep.xcdatamodeld */,
+				21347A9D24854C4A00D7279B /* Constants.swift */,
 			);
 			path = Emep;
 			sourceTree = "<group>";
@@ -199,6 +221,7 @@
 		33F2A83A2475A45A00B86D7F /* EmepTests */ = {
 			isa = PBXGroup;
 			children = (
+				2133A185248693F500C384A4 /* AuthenticationTests.swift */,
 				F0481C1524853A5A005F9C0F /* View Models */,
 				F04F0C82247EE0FB006B3E3A /* Utils */,
 				F0EBC11F247E964000BF32B4 /* Models */,
@@ -222,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FD3CC8247D9A0E00BE3B15 /* Calendar */,
+				21347A9B248547AA00D7279B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -615,12 +639,16 @@
 				F0C1AE29248FE1CF007483CA /* DateHeader.swift in Sources */,
 				33F2A82C2475A45200B86D7F /* Emep.xcdatamodeld in Sources */,
 				F0C08D3D2489203B00B88D79 /* CalendarViewModel.swift in Sources */,
+				21347A9E24854C4A00D7279B /* Constants.swift in Sources */,
 				33F2A8262475A45200B86D7F /* ViewController.swift in Sources */,
 				33F2A8222475A45200B86D7F /* AppDelegate.swift in Sources */,
 				F0EBC119247E925E00BF32B4 /* CalendarResponse.swift in Sources */,
 				F0481C1B248547D8005F9C0F /* Dictionary+Ext.swift in Sources */,
 				F04F0C7C247EB903006B3E3A /* DateUtil.swift in Sources */,
 				F0C08D3F2489289500B88D79 /* DateCell.swift in Sources */,
+				21347A9A2485454600D7279B /* UserNetworkManager.swift in Sources */,
+				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
+				21347A9C248547AA00D7279B /* User.swift in Sources */,
 				F0481C14248528B5005F9C0F /* UIView+Ext.swift in Sources */,
 				F0EBC11B247E929F00BF32B4 /* Appointment.swift in Sources */,
 				F0C1AE27248FB6A1007483CA /* Array+Ext.swift in Sources */,
@@ -639,6 +667,7 @@
 				F04F0C84247EE114006B3E3A /* DateUtilTest.swift in Sources */,
 				33F2A83C2475A45A00B86D7F /* EmepTests.swift in Sources */,
 				F0EBC121247E966700BF32B4 /* CalendarModelTest.swift in Sources */,
+				2133A186248693F500C384A4 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
