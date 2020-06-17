@@ -10,6 +10,8 @@ target 'Emep' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'TimelineTableViewCell'
 
   target 'EmepTests' do
