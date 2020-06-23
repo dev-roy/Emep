@@ -29,7 +29,7 @@ class CalendarViewController: UIViewController {
     private func setUpDataBinding() {
         viewModel.presentTimelineHandler = displayTimeline
         viewModel.presentCalendarHandler = displayCalendar
-        viewModel.reloadCalendarDatesHandler = calendarView.reloadDates
+        viewModel.reloadCalendarDatesHandler = reloadDatesInCalendar
     }
     
     private func displayTimeline() {
@@ -51,6 +51,7 @@ class CalendarViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 10
+        tableView.allowsSelection = false
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -63,6 +64,13 @@ class CalendarViewController: UIViewController {
 
     @IBAction func onSegmentedControlChanged(_ sender: Any) {
         viewModel.onSegmentedControlChanged(input: segmentedControl.selectedSegmentIndex)
+    }
+    
+    private func reloadDatesInCalendar(dates: [Date]) {
+        calendarView.reloadDates(dates)
+        if let lastDate = dates.last {
+            calendarView.scrollToDate(lastDate)
+        }
     }
 }
 

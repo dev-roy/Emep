@@ -56,7 +56,6 @@ class CalendarViewModel {
     
     func getHeaderTitleFor(indexPath: IndexPath) -> String {
         guard let calendarMonths = calendarMonths else { return "" }
-        // let year = timelineViewModel.getHeaderStringForSection(indexPath.section)
         return DateUtil.getMonthAndYearStringFrom(date: calendarMonths[indexPath.section])
     }
 }
