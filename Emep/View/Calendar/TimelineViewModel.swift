@@ -20,7 +20,7 @@ class TimelineViewModel {
 
     init() {
         let appointments = calendarResponse.appointments
-        let timelineViewModels = appointments.toCellViewModels()
+        var timelineViewModels = appointments.toCellViewModels()
         groupedYearAppointments = timelineViewModels.groupByYear()
         years = groupedYearAppointments.getSortedKeys()
         groupedDayAppointments = timelineViewModels.groupByDayDate()

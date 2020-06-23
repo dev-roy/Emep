@@ -9,8 +9,11 @@
 import Foundation
 
 extension Array where Element == TimelineCellViewModel {
-    func groupByYear() -> [Int: [Element]] {
-        Dictionary(grouping: self, by: { (viewModel: Element) in viewModel.year })
+    mutating func groupByYear() -> [Int: [Element]] {
+        self.sort { (previous: TimelineCellViewModel, next: TimelineCellViewModel) -> Bool in
+            previous.getDate() > next.getDate()
+        }
+        return Dictionary(grouping: self, by: { (viewModel: Element) in viewModel.year })
     }
 
     func groupByDayDate() -> [String: [Element]] {
