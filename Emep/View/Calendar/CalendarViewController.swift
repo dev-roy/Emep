@@ -18,23 +18,53 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var calendarContainerView: UIView!
+    @IBOutlet weak var dateAppointmentsText: UITextView!
+    @IBOutlet weak var selectedDateLabel: UILabel!
+    
+    private let spinner = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpInitialState()
         setUpTable()
         setUpDataBinding()
         setUpCalendar()
+    }
+    
+    private func setUpInitialState() {
+        displayLoader()
+        viewModel.downloadAppointments()
+        selectedDateLabel.text = "Select a date"
+        dateAppointmentsText.text = nil
     }
     
     private func setUpDataBinding() {
         viewModel.presentTimelineHandler = displayTimeline
         viewModel.presentCalendarHandler = displayCalendar
         viewModel.reloadCalendarDatesHandler = reloadDatesInCalendar
+        viewModel.hideLoaderHandler = hideLoader
+        viewModel.reloadCalendarHandler = reloadCalendar
+        viewModel.reloadTimelineHandler = reloadTimeline
+        viewModel.scrollToDateHandler = scrollCalendarTo
+        viewModel.displayAppointmentDataHandler = displayAppointmentInformation
+    }
+    
+    private func displayLoader() {
+        segmentedControl.isEnabled = false
+        tableView.isHidden = true
+        calendarContainerView.isHidden = true
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(spinner)
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.startAnimating()
     }
     
     private func displayTimeline() {
-        tableView.isHidden = false
-        calendarContainerView.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.isHidden = false
+            self?.calendarContainerView.isHidden = true
+        }
     }
     
     private func displayCalendar() {
@@ -65,12 +95,46 @@ class CalendarViewController: UIViewController {
     @IBAction func onSegmentedControlChanged(_ sender: Any) {
         viewModel.onSegmentedControlChanged(input: segmentedControl.selectedSegmentIndex)
     }
+
+    @IBAction func onAddAppointmentPressed(_ sender: Any) {
+        print("Add appointment")
+    }
     
     private func reloadDatesInCalendar(dates: [Date]) {
-        calendarView.reloadDates(dates)
-        if let lastDate = dates.last {
-            calendarView.scrollToDate(lastDate)
+        DispatchQueue.main.async { [weak self] in
+            self?.calendarView.reloadDates(dates)
         }
+    }
+    
+    private func reloadCalendar() {
+        DispatchQueue.main.async { [weak self] in
+            self?.calendarView.reloadData()
+        }
+    }
+    
+    private func reloadTimeline() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+    private func hideLoader() {
+        DispatchQueue.main.async { [weak self] in
+            self?.segmentedControl.isEnabled = true
+            self?.spinner.removeFromSuperview()
+            self?.spinner.stopAnimating()
+        }
+    }
+    
+    private func scrollCalendarTo(date: Date) {
+        DispatchQueue.main.async { [weak self] in
+            self?.calendarView.scrollToDate(date)
+        }
+    }
+    
+    private func displayAppointmentInformation(title: String, description: String) {
+        selectedDateLabel.text = title
+        dateAppointmentsText.text = description
     }
 }
 
