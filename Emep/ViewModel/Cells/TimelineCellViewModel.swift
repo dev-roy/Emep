@@ -34,4 +34,6 @@ class TimelineCellViewModel {
     func getAppointmentType() -> AppointmentType { appointment.type }
     
     func getDate() -> Date { DateUtil.getDateFrom(epocTime: appointment.date) }
+    
+    func getDescription() -> String { appointment.description }
 }
